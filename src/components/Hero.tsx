@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-primary/20">
       {/* Floating Nature Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 left-10 w-16 h-16 opacity-10 animate-float">

@@ -53,7 +53,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 md:py-32 bg-card">
+    <section id="pricing" className="py-24 md:py-32 bg-primary/20">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="space-y-4 text-center animate-fade-in-up">

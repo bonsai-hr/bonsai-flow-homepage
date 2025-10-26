@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 md:py-32 bg-background relative overflow-hidden">
+    <section id="contact" className="py-24 md:py-32 bg-primary/20 relative overflow-hidden">
       {/* Floating Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
         <div className="absolute bottom-20 right-10 w-32 h-32 animate-float">
