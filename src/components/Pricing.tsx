@@ -53,17 +53,37 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 md:py-32 bg-primary/20">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section id="pricing" className="py-24 md:py-32 bg-primary/20 relative overflow-hidden">
+      {/* Subtle organic divider at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent"></div>
+      
+      {/* Background nature accents */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.08]">
+        <div className="absolute top-16 left-12 animate-float">
+          <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+            <path d="M70 20 L70 100" stroke="hsl(180 60% 30%)" strokeWidth="2"/>
+            <circle cx="50" cy="50" r="18" fill="hsl(120 20% 60%)" opacity="0.4"/>
+            <circle cx="90" cy="70" r="15" fill="hsl(270 30% 70%)" opacity="0.3"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-24 right-16 animate-float-delayed">
+          <svg width="100" height="160" viewBox="0 0 100 160" fill="none">
+            <path d="M50 20 Q30 60, 40 100 Q50 130, 60 100 Q70 60, 50 20Z" 
+                  fill="hsl(180 60% 30%)" opacity="0.15"/>
+          </svg>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="space-y-4 text-center animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
               Packages & <span className="text-gradient">Pricing</span>
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto">
               Flexible pricing based on your company size. Choose how many steps you need.
             </p>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -112,9 +132,9 @@ const Pricing = () => {
           </div>
 
           <div className="text-center pt-8 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-            <p className="text-muted-foreground">
+            <p className="text-foreground/70">
               All packages can be customized to your specific needs.{" "}
-              <a href="#contact" className="text-primary hover:underline font-medium">
+              <a href="#contact" className="text-secondary hover:underline font-medium transition-colors">
                 Let's discuss what works for you.
               </a>
             </p>

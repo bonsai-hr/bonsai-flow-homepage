@@ -4,16 +4,26 @@ import { Button } from "@/components/ui/button";
 const Contact = () => {
   return (
     <section id="contact" className="py-24 md:py-32 bg-primary/20 relative overflow-hidden">
+      {/* Subtle organic divider at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent"></div>
+      
       {/* Floating Background Elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
-        <div className="absolute bottom-20 right-10 w-32 h-32 animate-float">
-          <svg viewBox="0 0 100 100" className="fill-primary">
-            <path d="M50 10 Q65 35, 85 45 Q65 55, 50 80 Q35 55, 15 45 Q35 35, 50 10Z" />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.12]">
+        {/* Organic bonsai cluster - bottom right */}
+        <div className="absolute bottom-20 right-10 animate-float">
+          <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+            <path d="M100 120 Q80 80, 100 60 Q120 80, 100 120Z" fill="hsl(120 20% 60%)" opacity="0.4"/>
+            <path d="M120 100 Q140 80, 150 100 Q140 120, 120 100Z" fill="hsl(270 30% 70%)" opacity="0.3"/>
+            <path d="M80 90 Q60 70, 70 50 Q90 70, 80 90Z" fill="hsl(120 20% 60%)" opacity="0.35"/>
+            <path d="M100 120 L100 160" stroke="hsl(180 60% 30%)" strokeWidth="3" strokeLinecap="round"/>
           </svg>
         </div>
-        <div className="absolute top-20 left-20 w-24 h-24 animate-float-delayed">
-          <svg viewBox="0 0 100 100" className="fill-accent">
-            <path d="M50 10 Q60 30, 80 40 Q60 50, 50 70 Q40 50, 20 40 Q40 30, 50 10Z" />
+        
+        {/* Gentle leaf shapes - top left */}
+        <div className="absolute top-20 left-20 animate-float-delayed">
+          <svg width="150" height="150" viewBox="0 0 150 150" fill="none">
+            <ellipse cx="75" cy="60" rx="25" ry="15" fill="hsl(120 20% 60%)" opacity="0.3" transform="rotate(-20 75 60)"/>
+            <ellipse cx="60" cy="90" rx="20" ry="12" fill="hsl(270 30% 70%)" opacity="0.25" transform="rotate(30 60 90)"/>
           </svg>
         </div>
       </div>
@@ -25,7 +35,7 @@ const Contact = () => {
               Ready to make your HR team the kind that{" "}
               <span className="text-gradient">makes money</span>?
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
               Let's have a conversation about where your HR team is now and where it could be.
               No pressure, no jargon — just an honest chat about making work better.
             </p>
@@ -54,7 +64,7 @@ const Contact = () => {
             className="pt-12 border-t border-border animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
-            <p className="text-sm text-muted-foreground mb-4">Connect with us</p>
+            <p className="text-sm text-foreground/60 mb-4">Connect with us</p>
             <div className="flex justify-center gap-4">
               <Button variant="ghost" size="icon" asChild>
                 <a
@@ -74,7 +84,7 @@ const Contact = () => {
             className="pt-12 opacity-50 animate-fade-in-up"
             style={{ animationDelay: "0.4s" }}
           >
-            <p className="text-sm text-muted-foreground italic">
+            <p className="text-sm text-foreground/50 italic">
               Testimonials and case studies coming soon
             </p>
           </div>

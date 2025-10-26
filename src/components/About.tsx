@@ -1,13 +1,26 @@
 const About = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section id="about" className="py-24 md:py-32 bg-background relative overflow-hidden">
+      {/* Subtle organic divider at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+      
+      {/* Background nature accents */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.08]">
+        <div className="absolute top-20 right-12 animate-float-delayed">
+          <svg width="150" height="150" viewBox="0 0 150 150" fill="none">
+            <circle cx="75" cy="75" r="60" fill="hsl(120 20% 60%)" opacity="0.3"/>
+            <circle cx="75" cy="75" r="40" fill="hsl(270 30% 70%)" opacity="0.2"/>
+          </svg>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-4 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
               About <span className="text-gradient">Bonsai HR</span>
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full"></div>
           </div>
 
           <div className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground">
