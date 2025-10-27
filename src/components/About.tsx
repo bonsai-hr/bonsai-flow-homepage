@@ -12,6 +12,31 @@ const About = () => {
             <circle cx="75" cy="75" r="40" fill="hsl(270 30% 70%)" opacity="0.2"/>
           </svg>
         </div>
+
+        {/* Drifting leaves throughout section */}
+        <div className="absolute top-1/4 left-12 animate-drift-1">
+          <svg width="50" height="60" viewBox="0 0 50 60" fill="none">
+            <ellipse cx="25" cy="30" rx="15" ry="24" fill="hsl(120 20% 60%)" opacity="0.6" transform="rotate(-20 25 30)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-1/2 right-20 animate-drift-3">
+          <svg width="40" height="50" viewBox="0 0 40 50" fill="none">
+            <ellipse cx="20" cy="25" rx="12" ry="20" fill="hsl(270 30% 70%)" opacity="0.5" transform="rotate(25 20 25)"/>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-1/4 left-1/3 animate-drift-2">
+          <svg width="45" height="55" viewBox="0 0 45 55" fill="none">
+            <ellipse cx="22" cy="27" rx="13" ry="22" fill="hsl(15 90% 78%)" opacity="0.4" transform="rotate(-12 22 27)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-3/4 right-1/4 animate-drift-4">
+          <svg width="35" height="45" viewBox="0 0 35 45" fill="none">
+            <ellipse cx="17" cy="22" rx="11" ry="18" fill="hsl(120 20% 60%)" opacity="0.6" transform="rotate(18 17 22)"/>
+          </svg>
+        </div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">

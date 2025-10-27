@@ -42,6 +42,44 @@ const Hero = () => {
             <ellipse cx="40" cy="55" rx="14" ry="8" fill="hsl(120 20% 60%)" opacity="0.4" transform="rotate(-10 40 55)"/>
           </svg>
         </div>
+
+        {/* Additional drifting leaves - varied sizes and positions */}
+        <div className="absolute top-1/4 left-1/4 animate-drift-1">
+          <svg width="40" height="50" viewBox="0 0 40 50" fill="none">
+            <ellipse cx="20" cy="25" rx="12" ry="20" fill="hsl(120 20% 60%)" opacity="0.7" transform="rotate(-15 20 25)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-1/3 right-1/3 animate-drift-2">
+          <svg width="35" height="45" viewBox="0 0 35 45" fill="none">
+            <ellipse cx="17" cy="22" rx="10" ry="18" fill="hsl(270 30% 70%)" opacity="0.6" transform="rotate(20 17 22)"/>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-1/3 left-1/3 animate-drift-3">
+          <svg width="45" height="55" viewBox="0 0 45 55" fill="none">
+            <ellipse cx="22" cy="27" rx="14" ry="22" fill="hsl(15 90% 78%)" opacity="0.5" transform="rotate(-25 22 27)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-2/3 right-1/4 animate-drift-4">
+          <svg width="30" height="40" viewBox="0 0 30 40" fill="none">
+            <ellipse cx="15" cy="20" rx="9" ry="16" fill="hsl(120 20% 60%)" opacity="0.6" transform="rotate(12 15 20)"/>
+          </svg>
+        </div>
+
+        {/* Falling leaves - very slow drift */}
+        <div className="absolute top-0 left-1/5 animate-fall-slow">
+          <svg width="25" height="30" viewBox="0 0 25 30" fill="none">
+            <ellipse cx="12" cy="15" rx="8" ry="12" fill="hsl(120 20% 60%)" opacity="0.5" transform="rotate(-10 12 15)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-0 right-1/5 animate-fall-medium">
+          <svg width="28" height="35" viewBox="0 0 28 35" fill="none">
+            <ellipse cx="14" cy="17" rx="9" ry="14" fill="hsl(270 30% 70%)" opacity="0.5" transform="rotate(15 14 17)"/>
+          </svg>
+        </div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">

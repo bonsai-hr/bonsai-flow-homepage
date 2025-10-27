@@ -26,6 +26,44 @@ const Contact = () => {
             <ellipse cx="60" cy="90" rx="20" ry="12" fill="hsl(270 30% 70%)" opacity="0.25" transform="rotate(30 60 90)"/>
           </svg>
         </div>
+
+        {/* Additional drifting leaves */}
+        <div className="absolute top-1/3 left-1/4 animate-drift-1">
+          <svg width="45" height="55" viewBox="0 0 45 55" fill="none">
+            <ellipse cx="22" cy="27" rx="14" ry="22" fill="hsl(120 20% 60%)" opacity="0.6" transform="rotate(-18 22 27)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-2/3 right-1/3 animate-drift-2">
+          <svg width="38" height="48" viewBox="0 0 38 48" fill="none">
+            <ellipse cx="19" cy="24" rx="12" ry="19" fill="hsl(270 30% 70%)" opacity="0.5" transform="rotate(22 19 24)"/>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-1/3 left-1/2 animate-drift-3">
+          <svg width="42" height="52" viewBox="0 0 42 52" fill="none">
+            <ellipse cx="21" cy="26" rx="13" ry="21" fill="hsl(15 90% 78%)" opacity="0.5" transform="rotate(-15 21 26)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-1/2 right-20 animate-drift-4">
+          <svg width="35" height="45" viewBox="0 0 35 45" fill="none">
+            <ellipse cx="17" cy="22" rx="11" ry="18" fill="hsl(120 20% 60%)" opacity="0.6" transform="rotate(15 17 22)"/>
+          </svg>
+        </div>
+
+        {/* Slow falling leaves */}
+        <div className="absolute top-0 left-1/3 animate-fall-slow">
+          <svg width="28" height="35" viewBox="0 0 28 35" fill="none">
+            <ellipse cx="14" cy="17" rx="9" ry="14" fill="hsl(120 20% 60%)" opacity="0.5" transform="rotate(-12 14 17)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-0 right-2/5 animate-fall-medium">
+          <svg width="30" height="38" viewBox="0 0 30 38" fill="none">
+            <ellipse cx="15" cy="19" rx="10" ry="15" fill="hsl(270 30% 70%)" opacity="0.5" transform="rotate(18 15 19)"/>
+          </svg>
+        </div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
