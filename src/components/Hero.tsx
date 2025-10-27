@@ -43,7 +43,7 @@ const Hero = () => {
           </svg>
         </div>
 
-        {/* Additional drifting leaves - varied sizes and positions */}
+        {/* Drifting leaves - varied positions and sizes */}
         <div className="absolute top-1/4 left-1/4 animate-drift-1">
           <svg width="40" height="50" viewBox="0 0 40 50" fill="none">
             <ellipse cx="20" cy="25" rx="12" ry="20" fill="hsl(120 20% 60%)" opacity="0.7" transform="rotate(-15 20 25)"/>
@@ -68,7 +68,7 @@ const Hero = () => {
           </svg>
         </div>
 
-        {/* Falling leaves - very slow drift */}
+        {/* Falling leaves from top */}
         <div className="absolute top-0 left-1/5 animate-fall-slow">
           <svg width="25" height="30" viewBox="0 0 25 30" fill="none">
             <ellipse cx="12" cy="15" rx="8" ry="12" fill="hsl(120 20% 60%)" opacity="0.5" transform="rotate(-10 12 15)"/>
@@ -96,6 +96,85 @@ const Hero = () => {
         <div className="absolute top-0 left-3/5 animate-fall-slow">
           <svg width="24" height="30" viewBox="0 0 24 30" fill="none">
             <ellipse cx="12" cy="15" rx="8" ry="12" fill="hsl(270 30% 70%)" opacity="0.5" transform="rotate(-15 12 15)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-0 right-3/5 animate-fall-medium">
+          <svg width="23" height="29" viewBox="0 0 23 29" fill="none">
+            <ellipse cx="11" cy="14" rx="7" ry="12" fill="hsl(15 90% 78%)" opacity="0.48" transform="rotate(10 11 14)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-0 left-1/6 animate-fall-slow">
+          <svg width="27" height="33" viewBox="0 0 27 33" fill="none">
+            <ellipse cx="13" cy="16" rx="8" ry="13" fill="hsl(120 20% 60%)" opacity="0.52" transform="rotate(-14 13 16)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-0 right-1/6 animate-fall-medium">
+          <svg width="21" height="27" viewBox="0 0 21 27" fill="none">
+            <ellipse cx="10" cy="13" rx="7" ry="11" fill="hsl(270 30% 70%)" opacity="0.46" transform="rotate(16 10 13)"/>
+          </svg>
+        </div>
+
+        {/* More scattered drifting leaves */}
+        <div className="absolute top-1/6 left-1/5 animate-drift-2">
+          <svg width="32" height="42" viewBox="0 0 32 42" fill="none">
+            <ellipse cx="16" cy="21" rx="10" ry="17" fill="hsl(120 20% 60%)" opacity="0.6" transform="rotate(-22 16 21)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-1/5 right-1/6 animate-drift-4">
+          <svg width="38" height="48" viewBox="0 0 38 48" fill="none">
+            <ellipse cx="19" cy="24" rx="12" ry="19" fill="hsl(15 90% 78%)" opacity="0.55" transform="rotate(18 19 24)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-2/5 left-1/6 animate-drift-1">
+          <svg width="34" height="44" viewBox="0 0 34 44" fill="none">
+            <ellipse cx="17" cy="22" rx="11" ry="18" fill="hsl(270 30% 70%)" opacity="0.58" transform="rotate(-19 17 22)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-3/5 right-1/5 animate-drift-3">
+          <svg width="36" height="46" viewBox="0 0 36 46" fill="none">
+            <ellipse cx="18" cy="23" rx="11" ry="19" fill="hsl(120 20% 60%)" opacity="0.62" transform="rotate(21 18 23)"/>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-1/5 left-1/4 animate-drift-2">
+          <svg width="33" height="43" viewBox="0 0 33 43" fill="none">
+            <ellipse cx="16" cy="21" rx="10" ry="17" fill="hsl(15 90% 78%)" opacity="0.5" transform="rotate(-16 16 21)"/>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-1/4 right-1/3 animate-drift-4">
+          <svg width="37" height="47" viewBox="0 0 37 47" fill="none">
+            <ellipse cx="18" cy="23" rx="11" ry="19" fill="hsl(270 30% 70%)" opacity="0.54" transform="rotate(13 18 23)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-1/2 left-10 animate-drift-1">
+          <svg width="31" height="41" viewBox="0 0 31 41" fill="none">
+            <ellipse cx="15" cy="20" rx="9" ry="16" fill="hsl(120 20% 60%)" opacity="0.56" transform="rotate(-20 15 20)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-1/2 right-10 animate-drift-3">
+          <svg width="39" height="49" viewBox="0 0 39 49" fill="none">
+            <ellipse cx="19" cy="24" rx="12" ry="20" fill="hsl(15 90% 78%)" opacity="0.52" transform="rotate(17 19 24)"/>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-1/6 left-12 animate-drift-2">
+          <svg width="35" height="45" viewBox="0 0 35 45" fill="none">
+            <ellipse cx="17" cy="22" rx="10" ry="18" fill="hsl(270 30% 70%)" opacity="0.57" transform="rotate(-12 17 22)"/>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-1/6 right-16 animate-drift-4">
+          <svg width="29" height="39" viewBox="0 0 29 39" fill="none">
+            <ellipse cx="14" cy="19" rx="9" ry="16" fill="hsl(120 20% 60%)" opacity="0.53" transform="rotate(19 14 19)"/>
           </svg>
         </div>
       </div>
