@@ -64,6 +64,30 @@ const Contact = () => {
             <ellipse cx="15" cy="19" rx="10" ry="15" fill="hsl(270 30% 70%)" opacity="0.5" transform="rotate(18 15 19)"/>
           </svg>
         </div>
+
+        <div className="absolute top-0 left-2/5 animate-fall-slow">
+          <svg width="25" height="32" viewBox="0 0 25 32" fill="none">
+            <ellipse cx="12" cy="16" rx="8" ry="13" fill="hsl(15 90% 78%)" opacity="0.45" transform="rotate(-9 12 16)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-0 right-1/5 animate-fall-medium">
+          <svg width="27" height="34" viewBox="0 0 27 34" fill="none">
+            <ellipse cx="13" cy="17" rx="9" ry="14" fill="hsl(120 20% 60%)" opacity="0.5" transform="rotate(11 13 17)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-1/4 left-10 animate-drift-2">
+          <svg width="40" height="50" viewBox="0 0 40 50" fill="none">
+            <ellipse cx="20" cy="25" rx="12" ry="20" fill="hsl(270 30% 70%)" opacity="0.5" transform="rotate(-14 20 25)"/>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-1/4 right-12 animate-drift-4">
+          <svg width="36" height="46" viewBox="0 0 36 46" fill="none">
+            <ellipse cx="18" cy="23" rx="11" ry="19" fill="hsl(15 90% 78%)" opacity="0.55" transform="rotate(16 18 23)"/>
+          </svg>
+        </div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">

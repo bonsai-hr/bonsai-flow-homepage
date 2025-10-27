@@ -80,6 +80,24 @@ const Hero = () => {
             <ellipse cx="14" cy="17" rx="9" ry="14" fill="hsl(270 30% 70%)" opacity="0.5" transform="rotate(15 14 17)"/>
           </svg>
         </div>
+
+        <div className="absolute top-0 left-2/5 animate-fall-slow">
+          <svg width="22" height="28" viewBox="0 0 22 28" fill="none">
+            <ellipse cx="11" cy="14" rx="7" ry="11" fill="hsl(15 90% 78%)" opacity="0.4" transform="rotate(-8 11 14)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-0 right-2/5 animate-fall-medium">
+          <svg width="26" height="32" viewBox="0 0 26 32" fill="none">
+            <ellipse cx="13" cy="16" rx="8" ry="13" fill="hsl(120 20% 60%)" opacity="0.45" transform="rotate(12 13 16)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-0 left-3/5 animate-fall-slow">
+          <svg width="24" height="30" viewBox="0 0 24 30" fill="none">
+            <ellipse cx="12" cy="15" rx="8" ry="12" fill="hsl(270 30% 70%)" opacity="0.5" transform="rotate(-15 12 15)"/>
+          </svg>
+        </div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">

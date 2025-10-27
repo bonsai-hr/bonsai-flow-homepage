@@ -37,6 +37,30 @@ const About = () => {
             <ellipse cx="17" cy="22" rx="11" ry="18" fill="hsl(120 20% 60%)" opacity="0.6" transform="rotate(18 17 22)"/>
           </svg>
         </div>
+
+        <div className="absolute top-0 left-1/5 animate-fall-slow">
+          <svg width="26" height="32" viewBox="0 0 26 32" fill="none">
+            <ellipse cx="13" cy="16" rx="9" ry="13" fill="hsl(15 90% 78%)" opacity="0.45" transform="rotate(-10 13 16)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-0 right-1/3 animate-fall-medium">
+          <svg width="24" height="30" viewBox="0 0 24 30" fill="none">
+            <ellipse cx="12" cy="15" rx="8" ry="12" fill="hsl(120 20% 60%)" opacity="0.5" transform="rotate(14 12 15)"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-1/3 left-16 animate-drift-1">
+          <svg width="38" height="48" viewBox="0 0 38 48" fill="none">
+            <ellipse cx="19" cy="24" rx="12" ry="19" fill="hsl(270 30% 70%)" opacity="0.55" transform="rotate(-16 19 24)"/>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-1/3 right-16 animate-drift-3">
+          <svg width="42" height="52" viewBox="0 0 42 52" fill="none">
+            <ellipse cx="21" cy="26" rx="13" ry="21" fill="hsl(120 20% 60%)" opacity="0.5" transform="rotate(20 21 26)"/>
+          </svg>
+        </div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
