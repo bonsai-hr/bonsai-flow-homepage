@@ -158,14 +158,12 @@ const About = () => {
 
           <div className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground">
             <p className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              We're a new breed of HR consultancy built for the AI era. Our job is to help People
-              teams cut down BAU chaos, modernise how they work, and finally have time for the
-              things that actually move the business forward.
+              We’re a new breed of AI enablement specialists for HR teams. Our job is to help People teams cut down BAU chaos, modernise how they work, and finally have time for the things that actually move the business forward.
             </p>
 
             <p className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               We believe HR teams should be working in the thick of the action, driving revenue —
-              not buried in low-impact projects.
+              not buried in low-impact admin.
             </p>
 
             <p className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
@@ -176,7 +174,7 @@ const About = () => {
 
           <div className="pt-8 text-center animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             <blockquote className="text-2xl md:text-3xl font-semibold text-foreground italic">
-              "HR teams should be revenue drivers, not cost centres."
+              "The future of HR relies on proving its impact on revenue."
             </blockquote>
           </div>
         </div>
