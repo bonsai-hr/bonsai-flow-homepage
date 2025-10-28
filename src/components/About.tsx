@@ -158,7 +158,7 @@ const About = () => {
 
           <div className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground">
             <p className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              We’re a new breed of AI enablement specialists for HR teams. Our job is to help People teams cut down BAU chaos, modernise how they work, and finally have time for the things that actually move the business forward.
+              We’re AI enablement specialists for HR teams. Our job is to help People teams cut down BAU chaos, modernise how they work, and finally have time for the things that actually move the business forward.
             </p>
 
             <p className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
@@ -168,7 +168,7 @@ const About = () => {
 
             <p className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               We turn reactive, operational, and admin-heavy HR teams into commercial, proactive,
-              and strategic powerhouses. That's what we do. That's all we do.
+              and strategic powerhouses. That's what we do. The Bonsai way.
             </p>
           </div>
 
