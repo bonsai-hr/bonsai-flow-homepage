@@ -178,12 +178,10 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <div className="space-y-6 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight">
-              Ready to make your HR team the kind that{" "}
-              <span className="text-gradient">makes money</span>?
+              Cut Admin. Free Time. Grow <span className="text-gradient">Profit</span>.
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-              Let's have a conversation about where your HR team is now and where it could be.
-              No pressure, no jargon — just an honest chat about making work better.
+              Let’s have a conversation about where your HR team is now and where you would like them to be. No pressure, no headache — just an honest chat about working better, smarter, faster.
             </p>
           </div>
 
