@@ -16,7 +16,7 @@ const Process = () => {
       title: "Automate",
       icon: Zap,
       description:
-        "Implement an AI agent like Harriet to reduce admin and employee query time. Let technology handle the repetitive stuff.",
+        "We assess and implement the right AI agent for your business — cutting admin, sharpening focus on what matters most, and freeing HR to work smarter.",
       color: "text-secondary",
     },
     {
@@ -24,7 +24,7 @@ const Process = () => {
       title: "Elevate",
       icon: TrendingUp,
       description:
-        "Train HR teams to think strategically, proactively, and commercially. Transform them into business partners who drive results.",
+        "Shift HR from support function to strategic partner — a team that acts proactively, commercially, and drives measurable results.",
       color: "text-accent",
     },
   ];
