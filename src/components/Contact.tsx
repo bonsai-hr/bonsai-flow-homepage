@@ -177,7 +177,7 @@ const Contact = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <div className="space-y-6 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-center leading-snug">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-center leading-normal">
               Cut Admin. Free Time.<br />
                 Grow <span className="text-gradient">Profit</span>.
             </h2>
@@ -229,8 +229,6 @@ const Contact = () => {
             className="pt-12 opacity-50 animate-fade-in-up"
             style={{ animationDelay: "0.4s" }}
           >
-            <p className="text-sm text-foreground/50 italic">
-              Testimonials and case studies coming soon
             </p>
           </div>
         </div>
