@@ -197,11 +197,6 @@ const Hero = () => {
               We help HR teams reclaim time, become more strategic, and drive both efficiency and growth.
             </p>
 
-          {/* One-liner */}
-          <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
-            We help businesses save and make money by turning HR teams into strategic powerhouses.
-          </p>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
             <Button asChild size="lg" className="text-base px-8 py-6 group">
