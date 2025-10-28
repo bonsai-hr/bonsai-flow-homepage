@@ -215,9 +215,10 @@ const Hero = () => {
           </div>
 
           {/* Tagline */}
-          <p className="text-sm md:text-base font-semibold text-primary pt-8">
+          <p className="text-lg md:text-xl font-bold text-primary pt-8">
             The Kind of HR That Makes You Money.
           </p>
+          
         </div>
       </div>
 
