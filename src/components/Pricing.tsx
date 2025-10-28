@@ -3,54 +3,38 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const Pricing = () => {
+  
   const tiers = [
     {
-      name: "Starter",
-      headcount: "Up to 150 employees",
-      description: "Perfect for growing companies ready to modernise their HR.",
+      name: "🌱 Seedling",
+      headcount: "up to 150 employees",
+      description: "For growing companies ready to modernise their HR foundations.",
       features: [
-        "Choose 1-3 steps (Optimise, Automate, Elevate)",
+        "Choose 1–3 steps (Optimise, Automate, Elevate)",
         "Initial HR audit & gap analysis",
-        "Process documentation & simplification",
+        "Improve clarity across documents & processes",
         "Optional AI agent setup",
-        "Team training sessions",
-        "3-month support period",
+        "Elevate workshop for HR teams",
+        "Project duration: 1–3 months"
       ],
-      cta: "Get Started",
+      cta: "Contact Us"
     },
     {
-      name: "Growth",
+      name: "🌿 Sapling",
       headcount: "150–500 employees",
-      description: "For established teams ready to become strategic powerhouses.",
+      description: "For established teams ready to grow into strategic powerhouses.",
       features: [
-        "Choose 1-3 steps (Optimise, Automate, Elevate)",
-        "Comprehensive HR transformation roadmap",
-        "Advanced process automation",
-        "AI agent implementation & training",
-        "Strategic HR workshops",
-        "6-month support & coaching",
-        "Quarterly business reviews",
+        "Choose 2–3 steps (Optimise, Automate, Elevate)",
+        "HR maturity audit & roadmap",
+        "Improve and streamline existing processes",
+        "Tailored AI agent implementation & training",
+        "Elevate workshops for HR teams",
+        "Project duration: 3–6 months"
       ],
-      cta: "Get Started",
-      featured: true,
-    },
-    {
-      name: "Enterprise",
-      headcount: "500+ employees",
-      description: "Custom solutions for large organizations with complex needs.",
-      features: [
-        "Fully customized transformation program",
-        "Multi-location support",
-        "Enterprise AI implementation",
-        "Executive stakeholder management",
-        "Change management support",
-        "12-month partnership",
-        "Dedicated account manager",
-        "Custom integrations",
-      ],
-      cta: "Contact Us",
-    },
+      cta: "Contact Us"
+    }
   ];
+
 
   return (
     <section id="pricing" className="py-24 md:py-32 bg-primary/20 relative overflow-hidden">
@@ -78,7 +62,7 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="space-y-4 text-center animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              Packages & <span className="text-gradient">Pricing</span>
+              Bonsai Growth Plans ( <span className="text-gradient">Pricing</span> )
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto">
               Flexible pricing based on your company size. Choose how many steps you need.
