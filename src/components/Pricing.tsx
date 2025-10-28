@@ -70,7 +70,7 @@ const Pricing = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 justify-center">
+          <div className="grid md:grid-cols-2 gap-8 justify-center max-w-4xl mx-auto">
             {tiers.map((tier, index) => (
               <Card
                 key={tier.name}
