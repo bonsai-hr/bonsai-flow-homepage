@@ -193,6 +193,9 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-foreground/70 font-medium max-w-3xl mx-auto">
             The AI enablement specialists for HR teams.
           </p>
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+              We help HR teams reclaim time, become more strategic, and drive both efficiency and growth.
+            </p>
 
           {/* One-liner */}
           <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
