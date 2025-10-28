@@ -62,15 +62,15 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="space-y-4 text-center animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              Bonsai Growth Plans ( <span className="text-gradient">Pricing</span> )
+              Our <span className="text-gradient">Growth</span> Plans
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto">
-              Flexible pricing based on your company size. Choose how many steps you need.
+              Our packages are based on company size.
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 justify-center">
             {tiers.map((tier, index) => (
               <Card
                 key={tier.name}
