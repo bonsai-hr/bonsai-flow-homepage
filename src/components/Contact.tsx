@@ -224,13 +224,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Future Placeholder */}
-          <div
-            className="pt-12 opacity-50 animate-fade-in-up"
-            style={{ animationDelay: "0.4s" }}
-          >
-            </p>
-          </div>
+          {/* removed placeholder */}
         </div>
       </div>
     </section>
@@ -238,3 +232,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
