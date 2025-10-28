@@ -8,7 +8,7 @@ const Process = () => {
       title: "Optimise",
       icon: CheckCircle2,
       description:
-        "Close information gaps, update documents, and simplify processes. We make your HR foundation solid and efficient.",
+        "Improve clarity across documents, processes, and communication links. Build a foundation where everything works like clockwork — efficient, clear, and ready for AI.",
       color: "text-primary",
     },
     {
@@ -55,7 +55,7 @@ const Process = () => {
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="space-y-4 text-center animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              How It Works — <span className="text-gradient">The Bonsai Process</span>
+              How It Works — The Bonsai <span className="text-gradient">Process</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Three simple steps to transform your HR team from admin-heavy to strategically powerful.
