@@ -40,23 +40,6 @@ const Pricing = () => {
     <section id="pricing" className="py-24 md:py-32 bg-primary/20 relative overflow-hidden">
       {/* Subtle organic divider at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent"></div>
-      
-      {/* Background nature accents */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.08]">
-        <div className="absolute top-16 left-12 animate-float">
-          <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
-            <path d="M70 20 L70 100" stroke="hsl(180 60% 30%)" strokeWidth="2"/>
-            <circle cx="50" cy="50" r="18" fill="hsl(120 20% 60%)" opacity="0.4"/>
-            <circle cx="90" cy="70" r="15" fill="hsl(270 30% 70%)" opacity="0.3"/>
-          </svg>
-        </div>
-        <div className="absolute bottom-24 right-16 animate-float-delayed">
-          <svg width="100" height="160" viewBox="0 0 100 160" fill="none">
-            <path d="M50 20 Q30 60, 40 100 Q50 130, 60 100 Q70 60, 50 20Z" 
-                  fill="hsl(180 60% 30%)" opacity="0.15"/>
-          </svg>
-        </div>
-      </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto space-y-16">
