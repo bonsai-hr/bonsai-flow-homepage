@@ -203,7 +203,7 @@ export default function FloatingBackground() {
         inset: 0,
         overflow: "hidden",
         pointerEvents: "none",
-        zIndex: 0,
+        zIndex: 1,
       }}
     />
   );
