@@ -11,20 +11,26 @@ const PALETTE = [
   "#F0E0D8", // warm neutral
 ];
 
-type ShapeType = "leaf" | "oval" | "squiggle";
+type ShapeType = "leaf" | "tallLeaf" | "oval" | "squiggle" | "pebbles";
 
 const CONFIG = {
   counts: { sm: 14, md: 22, lg: 32 },
-  lifespanMs: [12000, 22000],
-  fadeInMs: 800,
-  fadeOutMs: 900,
+  lifespanMs: [16000, 32000],
+  fadeInMs: 1400,
+  fadeOutMs: 1400,
   speedPxPerSec: [4, 18],
   rotDegPerSec: [-8, 8],
   opacity: [0.18, 0.35],
   sizePx: [30, 90],
   paddingPx: 24,
   resizeDebounceMs: 200,
-  mix: { leaf: 1, oval: 1, squiggle: 1 } as Record<ShapeType, number>,
+ mix: { 
+  leaf: 2, 
+  tallLeaf: 2, 
+  oval: 2, 
+  squiggle: 2, 
+  pebbles: 2 
+} as Record<ShapeType, number>,
 };
 
 function rand(min: number, max: number) { return min + Math.random() * (max - min); }
@@ -103,14 +109,59 @@ function makeSquiggle(size: number, color: string) {
   return svg;
 }
 
+function makeTallLeaf(size: number, color: string) {
+  const svg = baseSvg(size);
+  // Tall, narrow leaf (like your old vertical ones)
+  const w = size * 0.55;
+  const h = size * 1.25; // a bit taller
+  svg.setAttribute("width", String(w));
+  svg.setAttribute("height", String(h));
+  svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+
+  svg.innerHTML = `
+    <path d="
+      M ${w/2} ${h*0.06}
+      C ${w*0.82} ${h*0.18}, ${w*0.88} ${h*0.72}, ${w/2} ${h*0.92}
+      C ${w*0.18} ${h*0.76}, ${w*0.12} ${h*0.30}, ${w/2} ${h*0.06}
+      Z"
+      fill="${color}"
+      opacity="${rand(CONFIG.opacity[0], CONFIG.opacity[1])}"
+    />
+  `;
+  return svg;
+}
+
+function makePebbles(size: number, color: string) {
+  const svg = baseSvg(size);
+  // 2–3 small offset ellipses to mimic the old pebble clusters
+  const o1 = rand(CONFIG.opacity[0], CONFIG.opacity[1]);
+  const o2 = rand(CONFIG.opacity[0], CONFIG.opacity[1]);
+  const o3 = rand(CONFIG.opacity[0], CONFIG.opacity[1]);
+  const r = () => rand(0.16, 0.28); // relative radii
+
+  const cx = size * 0.5, cy = size * 0.5;
+  const dx = size * 0.22, dy = size * 0.18;
+
+  svg.innerHTML = `
+    <g>
+      <ellipse cx="${cx - dx}" cy="${cy - dy}" rx="${size*r()}" ry="${size*r()*0.75}" fill="${color}" opacity="${o1}" />
+      <ellipse cx="${cx + dx*0.6}" cy="${cy - dy*0.2}" rx="${size*r()}" ry="${size*r()*0.8}" fill="${color}" opacity="${o2}" />
+      <ellipse cx="${cx + dx*0.1}" cy="${cy + dy*0.9}" rx="${size*r()}" ry="${size*r()*0.7}" fill="${color}" opacity="${o3}" />
+    </g>
+  `;
+  return svg;
+}
+
 function createShapeEl() {
   const size = rand(CONFIG.sizePx[0], CONFIG.sizePx[1]);
   const color = PALETTE[rint(0, PALETTE.length - 1)];
   const type = pickWeighted(CONFIG.mix) as ShapeType;
-  const el =
-    type === "leaf" ? makeLeaf(size, color)
-    : type === "squiggle" ? makeSquiggle(size, color)
-    : makeOval(size, color);
+const el =
+  type === "leaf"     ? makeLeaf(size, color)      :
+  type === "tallLeaf" ? makeTallLeaf(size, color)  :
+  type === "pebbles"  ? makePebbles(size, color)   :
+  type === "squiggle" ? makeSquiggle(size, color)  :
+                        makeOval(size, color);
 
   const speed = rand(CONFIG.speedPxPerSec[0], CONFIG.speedPxPerSec[1]) / 60;
   const angle = rand(0, Math.PI * 2);
@@ -162,7 +213,9 @@ export default function FloatingBackground() {
         const m = 40;
         if (s.x < -m) s.x = st.vw + m; if (s.x > st.vw + m) s.x = -m;
         if (s.y < -m) s.y = st.vh + m; if (s.y > st.vh + m) s.y = -m;
-        s.el.style.transform = `translate(${s.x}px, ${s.y}px) rotate(${s.r}deg)`;
+        // subtle breathing (slow scale 0.98–1.02)
+const breathe = 0.98 + Math.abs(Math.sin((now - s.born) / 4000)) * 0.04;
+s.el.style.transform = `translate(${s.x}px, ${s.y}px) rotate(${s.r}deg) scale(${breathe})`;
 
         if (now - s.born > s.life && !s.fading) {
           s.fading = true;
