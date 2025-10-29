@@ -33,23 +33,6 @@ const Process = () => {
     <section id="process" className="py-24 md:py-32 bg-background relative overflow-hidden">
       {/* Subtle organic divider at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
-      
-      {/* Background nature accents */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.06]">
-        <div className="absolute bottom-20 left-16 animate-float">
-          <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
-            <path d="M90 30 Q120 60, 110 90 Q90 120, 70 90 Q60 60, 90 30Z" 
-                  fill="hsl(180 60% 30%)" opacity="0.2"/>
-          </svg>
-        </div>
-        {/* Flowing branch connector */}
-        <div className="absolute top-1/2 right-10 -translate-y-1/2 opacity-[0.1]">
-          <svg width="120" height="300" viewBox="0 0 120 300" fill="none">
-            <path d="M60 0 Q80 100, 60 150 Q40 200, 60 300" 
-                  stroke="hsl(120 20% 60%)" strokeWidth="2" fill="none"/>
-          </svg>
-        </div>
-      </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto space-y-16">
