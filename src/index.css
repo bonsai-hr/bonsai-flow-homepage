@@ -272,3 +272,19 @@ All colors MUST be HSL.
     }
   }
 }
+
+/* Hide the caret (typing cursor) and stop text from being selected */
+body {
+  user-select: none;          /* prevents text highlighting */
+  -webkit-user-select: none;  /* Safari fix */
+  -ms-user-select: none;      /* old IE fix */
+  caret-color: transparent;   /* hides the blinking cursor */
+}
+
+/* But allow caret + selection inside inputs/textareas if you use forms */
+input, textarea, [contenteditable="true"] {
+  user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  caret-color: auto;
+}
