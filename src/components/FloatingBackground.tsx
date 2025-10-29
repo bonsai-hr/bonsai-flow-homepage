@@ -227,12 +227,13 @@ export default function FloatingBackground() {
       const shapes = pts.map(p => {
         const s = createShapeEl();
         container.appendChild(s.el);
-        s.el.style.transform = `translate(${p.x}px, ${p.y}px) rotate(${rand(-15, 15)}deg) scale(1)`;
-        s.el.style.opacity = "0";
-        s.el.style.transition = `opacity ${CONFIG.fadeInMs}ms ease`;
-        requestAnimationFrame(() => { s.el.style.opacity = "1"; });
-        return { ...s, x: p.x, y: p.y, r: rand(-15, 15) };
-      });
+s.el.style.transform = `translate(${p.x}px, ${p.y}px) rotate(${rand(-15, 15)}deg) scale(1)`;
+s.el.style.opacity = "0";
+s.el.style.transition = "none";
+requestAnimationFrame(() => {
+  s.el.style.transition = `opacity ${CONFIG.fadeInMs}ms ease`;
+  s.el.style.opacity = "1";
+});
       state.current = { vw, vh, shapes };
       loop();
     };
@@ -274,10 +275,13 @@ export default function FloatingBackground() {
               s.life = rand(CONFIG.lifespanMs[0], CONFIG.lifespanMs[1]);
               s.fading = false;
 
-              s.el.style.transform = `translate(${s.x}px, ${s.y}px) rotate(${s.r}deg) scale(1)`;
-              s.el.style.opacity = "0";
-              s.el.style.transition = `opacity ${CONFIG.fadeInMs}ms ease`;
-              requestAnimationFrame(() => { s.el.style.opacity = "1"; });
+s.el.style.transform = `translate(${s.x}px, ${s.y}px) rotate(${s.r}deg) scale(1)`;
+s.el.style.opacity = "0";
+s.el.style.transition = "none"; // start invisible with no transition
+requestAnimationFrame(() => {
+  s.el.style.transition = `opacity ${CONFIG.fadeInMs}ms ease`; // then apply fade
+  s.el.style.opacity = "1";
+});
             }, CONFIG.fadeOutMs + 10);
           }, jitter);
         }
