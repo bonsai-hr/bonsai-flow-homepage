@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-/** Brand palette (edit to taste) */
+/** Brand palette */
 const PALETTE = [
   "#37AF65", // deep green
   "#89D6C2", // soft mint
@@ -28,7 +28,7 @@ const CONFIG = {
     leaf: 2,
     tallLeaf: 2,
     oval: 2,
-    twig: 2,       // replaces old squiggle
+    twig: 2,
     pebbles: 2,
   } as Record<ShapeType, number>,
 };
@@ -89,7 +89,6 @@ function makeLeaf(size: number, color: string) {
   return svg;
 }
 function makeTallLeaf(size: number, color: string) {
-  // Tall, narrow leaf + visible midrib (vein)
   const w = size * 0.55;
   const h = size * 1.25;
   const svg = baseSvg(w, h);
@@ -99,12 +98,10 @@ function makeTallLeaf(size: number, color: string) {
   const veinWidth   = Math.max(1.2, size * 0.022);
 
   svg.innerHTML = `
-    <!-- Leaf body -->
     <path d="M ${w/2} ${h*0.06}
              C ${w*0.82} ${h*0.18}, ${w*0.88} ${h*0.72}, ${w/2} ${h*0.92}
              C ${w*0.18} ${h*0.76}, ${w*0.12} ${h*0.30}, ${w/2} ${h*0.06} Z"
       fill="${color}" opacity="${fillOpacity}" />
-    <!-- Midrib / center vein -->
     <path d="M ${w/2} ${h*0.08} L ${w/2} ${h*0.94}"
       stroke="rgba(0,0,0,${veinOpacity})"
       stroke-width="${veinWidth}"
@@ -122,7 +119,6 @@ function makeOval(size: number, color: string) {
   return svg;
 }
 function makeTwig(size: number, color: string) {
-  // Small twig with 1–2 offshoots
   const s = size;
   const svg = baseSvg(s);
   const strokeW = Math.max(2, s * 0.045);
@@ -130,7 +126,7 @@ function makeTwig(size: number, color: string) {
   const bend    = s * 0.18;
   const offLen1 = s * 0.35;
   const offLen2 = s * 0.28;
-  const showSecond = Math.random() > 0.4; // 60% chance
+  const showSecond = Math.random() > 0.4;
   const op = Math.min(0.42, Math.max(0.22, rand(CONFIG.opacity[0], CONFIG.opacity[1])));
   svg.style.color = color;
 
@@ -198,7 +194,6 @@ function createShapeEl() {
   const vx = Math.cos(angle) * speed;
   const vy = Math.sin(angle) * speed;
 
-  // Stagger expiries by starting each at a random age
   const life = rand(CONFIG.lifespanMs[0], CONFIG.lifespanMs[1]);
   const born = performance.now() - rand(0, 1) * rand(CONFIG.lifespanMs[0], CONFIG.lifespanMs[1]);
 
@@ -227,13 +222,18 @@ export default function FloatingBackground() {
       const shapes = pts.map(p => {
         const s = createShapeEl();
         container.appendChild(s.el);
-s.el.style.transform = `translate(${p.x}px, ${p.y}px) rotate(${rand(-15, 15)}deg) scale(1)`;
-s.el.style.opacity = "0";
-s.el.style.transition = "none";
-requestAnimationFrame(() => {
-  s.el.style.transition = `opacity ${CONFIG.fadeInMs}ms ease`;
-  s.el.style.opacity = "1";
-});
+
+        // initial load fade-in
+        s.el.style.transform = `translate(${p.x}px, ${p.y}px) rotate(${rand(-15, 15)}deg) scale(1)`;
+        s.el.style.opacity = "0";
+        s.el.style.transition = "none";
+        requestAnimationFrame(() => {
+          s.el.style.transition = `opacity ${CONFIG.fadeInMs}ms ease`;
+          s.el.style.opacity = "1";
+        });
+
+        return { ...s, x: p.x, y: p.y, r: rand(-15, 15) };
+      });
       state.current = { vw, vh, shapes };
       loop();
     };
@@ -245,21 +245,18 @@ requestAnimationFrame(() => {
       for (const s of st.shapes) {
         s.x += s.vx; s.y += s.vy; s.r += s.rot;
 
-        // wrap edges
         const m = 40;
         if (s.x < -m) s.x = st.vw + m;
         if (s.x > st.vw + m) s.x = -m;
         if (s.y < -m) s.y = st.vh + m;
         if (s.y > st.vh + m) s.y = -m;
 
-        // subtle breathing
         const breathe = 0.98 + Math.abs(Math.sin((now - s.born) / 4000)) * 0.04;
         s.el.style.transform = `translate(${s.x}px, ${s.y}px) rotate(${s.r}deg) scale(${breathe})`;
 
-        // expiry → fade → respawn (with jitter so they don't sync)
         if (now - s.born > s.life && !s.fading) {
           s.fading = true;
-          const jitter = rint(0, 600); // 0–600ms random delay
+          const jitter = rint(0, 600);
           setTimeout(() => {
             s.el.style.transition = `opacity ${CONFIG.fadeOutMs}ms ease`;
             s.el.style.opacity = "0";
@@ -275,22 +272,21 @@ requestAnimationFrame(() => {
               s.life = rand(CONFIG.lifespanMs[0], CONFIG.lifespanMs[1]);
               s.fading = false;
 
-s.el.style.transform = `translate(${s.x}px, ${s.y}px) rotate(${s.r}deg) scale(1)`;
-s.el.style.opacity = "0";
-s.el.style.transition = "none"; // start invisible with no transition
-requestAnimationFrame(() => {
-  s.el.style.transition = `opacity ${CONFIG.fadeInMs}ms ease`; // then apply fade
-  s.el.style.opacity = "1";
-});
+              // fade-in new shape
+              s.el.style.transform = `translate(${s.x}px, ${s.y}px) rotate(${s.r}deg) scale(1)`;
+              s.el.style.opacity = "0";
+              s.el.style.transition = "none";
+              requestAnimationFrame(() => {
+                s.el.style.transition = `opacity ${CONFIG.fadeInMs}ms ease`;
+                s.el.style.opacity = "1";
+              });
             }, CONFIG.fadeOutMs + 10);
           }, jitter);
         }
       }
-
       state.current!.raf = requestAnimationFrame(loop);
     };
 
-    // build & wire events
     rebuild();
     let t: number | undefined;
     const onResize = () => { window.clearTimeout(t); t = window.setTimeout(rebuild, CONFIG.resizeDebounceMs); };
@@ -303,7 +299,6 @@ requestAnimationFrame(() => {
     };
   }, []);
 
-  // zIndex=10 → above section backgrounds; keep content at z-20
   return (
     <div
       ref={ref}
