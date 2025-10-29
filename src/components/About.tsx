@@ -7,7 +7,7 @@ const About = () => {
   {/* Content layer (ABOVE floaters) */}
   <div className="relative z-20">
       {/* Subtle organic divider at top */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto space-y-8">
