@@ -46,7 +46,7 @@ const Contact = () => {
             <div className="flex justify-center gap-4">
               <Button variant="ghost" size="icon" asChild>
                 <a
-                  href="https://linkedin.com"
+                  href="www.linkedin.com/company/bonsai-hr"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
