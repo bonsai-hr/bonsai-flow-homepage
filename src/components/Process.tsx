@@ -30,7 +30,7 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="py-24 md:py-32 bg-background relative overflow-hidden">
+    <section id="process" className="py-24 md:py-32 bg-background relative z-10 overflow-hidden">
       {/* Subtle organic divider at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
 
