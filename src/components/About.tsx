@@ -1,6 +1,11 @@
 const About = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-background relative z-10 overflow-hidden">
+ <section id="about" className="relative overflow-hidden py-24 md:py-32">
+  {/* Background layer (BEHIND floaters) */}
+  <div aria-hidden className="absolute inset-0 -z-10 bg-background" />
+
+  {/* Content layer (ABOVE floaters) */}
+  <div className="relative z-20">
       {/* Subtle organic divider at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
 
@@ -36,6 +41,7 @@ const About = () => {
           </div>
         </div>
       </div>
+    </div>
     </section>
   );
 };
