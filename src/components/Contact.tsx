@@ -198,9 +198,9 @@ const Contact = () => {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="text-base px-8 py-6">
-              <a href="mailto:hello@bonsaihr.co.uk">
+              <a href="mailto:calendar.app.google/miQu1P6JmvSVB6p96">
                 <Mail className="mr-2 h-5 w-5" />
-                hello@bonsaihr.co.uk
+                hello@bonsai-hr.co.uk
               </a>
             </Button>
           </div>
