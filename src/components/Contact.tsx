@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 md:py-32 bg-primary/20 relative overflow-hidden">
+    <section id="contact" className="py-24 md:py-32 bg-primary/20 relative z-10 overflow-hidden">
       {/* Subtle organic divider at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent"></div>
 
