@@ -15,7 +15,7 @@ const Contact = () => {
                 Grow <span className="text-gradient">Profit</span>.
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-              Let’s have a conversation about where your HR team is now and where you would like them to be. No pressure, no headache — just an honest chat about working better, smarter, faster.
+              What does your HR team look like now and what would you like to see them accomplish? Let's have an honest conversation. No pressure, just a better understanding of how they're getting on.
             </p>
           </div>
 
