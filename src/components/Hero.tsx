@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-            Say bye to admin... 
+            Say bye to admin 
             <br />
             and say{" "} <span className="text-gradient">hello</span> 
              <br />
