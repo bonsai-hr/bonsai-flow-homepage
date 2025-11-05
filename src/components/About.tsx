@@ -1,6 +1,9 @@
 const About = () => {
   return (
-    <section id="about" className="relative overflow-hidden py-24 md:py-32">
+    <section
+  id="about"
+  className="relative overflow-hidden pt-24 md:pt-32 pb-14 md:pb-16"
+>
       {/* Background layer (BEHIND floaters) */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-background" />
 
@@ -39,15 +42,12 @@ const About = () => {
               style={{ animationDelay: "0.4s" }}
             >
               <blockquote className="text-2xl md:text-3xl font-semibold text-foreground italic">
-                "The future of HR depends on how fast we can drop our admin, and start focusing on acheiving business goals.
-                
-                
-                "
+                "The future of HR depends on how fast we can drop our admin, and start focusing on acheiving business goals."
               </blockquote>
             </div>
 
             {/* Divider positioned AFTER content */}
-            <div className="mt-16 h-px bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+            <div className="mt-10 md:mt-12 h-px bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
           </div>
         </div>
       </div>
