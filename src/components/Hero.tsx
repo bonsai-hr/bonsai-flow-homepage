@@ -11,7 +11,9 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
             Say bye to admin... 
             <br />
-            and say{" "} <span className="text-gradient">hello</span> to Bonsai.
+            and say{" "} <span className="text-gradient">hello</span> 
+             <br />
+            to Bonsai.
           </h1>
 
           {/* Subtext */}
