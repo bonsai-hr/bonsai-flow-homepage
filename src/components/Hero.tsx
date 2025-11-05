@@ -25,21 +25,17 @@ const Hero = () => {
             </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+{/* CTA Button */}
+          <div className="flex justify-center pt-6">
             <Button asChild size="lg" className="text-base px-8 py-6 group">
-              <a href="https://calendar.app.google/miQu1P6JmvSVB6p96" target="_blank" rel="noopener noreferrer">
+              <a href="#about">
                 <Calendar className="mr-2 h-5 w-5" />
-                Book a Discovery Call
+                Find Out More
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-base px-8 py-6">
-              <a href="mailto:hello@bonsai-hr.co.uk">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </a>
-            </Button>
           </div>
+
 
           {/* Tagline */}
           <p className="text-lg md:text-xl font-bold text-primary pt-8">
