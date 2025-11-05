@@ -9,10 +9,10 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-            Traditional HR is buried in{" "}
-            <span className="text-gradient">admin</span>.
+            Say goodbye to HR admin, and say{" "}
+            <span className="text-gradient">hello</span>.
             <br />
-            We dig it out.
+            to being strategic.
           </h1>
 
           {/* Subtext */}
@@ -20,7 +20,7 @@ const Hero = () => {
             The AI enablement specialists for HR teams.
           </p>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-              We help HR teams reclaim time, become more strategic, and drive both efficiency and growth.
+              We help HR teams reclaim time by reducing their admin through AI enablement, allowing them to become more efficient and impactful.
             </p>
 
           {/* CTA Buttons */}
