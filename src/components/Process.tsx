@@ -16,7 +16,7 @@ const Process = () => {
       title: "Automate",
       icon: Zap,
       description:
-        "We assess and implement the right AI agent for your business — cutting admin, sharpening focus on what matters most, and freeing HR to work smarter.",
+        "We assess and implement the right AI agent for your business — cutting admin, sharpening focus on what matters most, and freeing up HR admin.",
       color: "text-secondary",
     },
     {
@@ -24,7 +24,7 @@ const Process = () => {
       title: "Elevate",
       icon: TrendingUp,
       description:
-        "Shift HR from support function to strategic partner — a team that acts proactively, commercially, and drives measurable results.",
+        "Shift from a support function to a proactive commercially focused unit — bringing better HR impact to the business.",
       color: "text-accent",
     },
   ];
