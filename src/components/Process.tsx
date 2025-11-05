@@ -31,69 +31,71 @@ const Process = () => {
 
   return (
     <section
-  id="process"
-  className="relative overflow-hidden pt-12 md:pt-16 pb-24 md:pb-32"
->
-  {/* Background layer (BEHIND floaters) */}
-  <div aria-hidden className="absolute inset-0 -z-10 bg-background" />
+      id="process"
+      className="relative overflow-hidden pt-12 md:pt-16 pb-24 md:pb-32"
+    >
+      {/* Background layer (BEHIND floaters) */}
+      <div aria-hidden className="absolute inset-0 -z-10 bg-background" />
 
-  {/* Content layer (ABOVE floaters) */}
-  <div className="relative z-20">
-      {/* Subtle organic divider at top */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+      {/* Content layer (ABOVE floaters) */}
+      <div className="relative z-20">
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-6xl mx-auto space-y-12">
+            <div className="space-y-4 text-center animate-fade-in-up">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+                How It Works — The Bonsai{" "}
+                <span className="text-gradient">Process</span>
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                Our enablement steps help your team to transform into strategic
+                powerhouses within a few months.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full" />
+            </div>
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <div className="space-y-4 text-center animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              How It Works — The Bonsai <span className="text-gradient">Process</span>
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our enablement steps help your team to transform into strategic powerhouses within a few months.
-            </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full"></div>
-          </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {steps.map((step, index) => (
+                <Card
+                  key={step.number}
+                  className="relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group animate-fade-in-up"
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  <CardContent className="p-8 space-y-6">
+                    {/* Step Number */}
+                    <div className="text-6xl font-bold text-muted/20 absolute top-4 right-4 group-hover:text-primary/10 transition-colors">
+                      {step.number}
+                    </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <Card
-                key={step.number}
-                className="relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <CardContent className="p-8 space-y-6">
-                  {/* Step Number */}
-                  <div className="text-6xl font-bold text-muted/20 absolute top-4 right-4 group-hover:text-primary/10 transition-colors">
-                    {step.number}
-                  </div>
+                    {/* Icon */}
+                    <div className={`${step.color} w-16 h-16 relative z-10`}>
+                      <step.icon className="w-full h-full" strokeWidth={1.5} />
+                    </div>
 
-                  {/* Icon */}
-                  <div className={`${step.color} w-16 h-16 relative z-10`}>
-                    <step.icon className="w-full h-full" strokeWidth={1.5} />
-                  </div>
+                    {/* Title */}
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground relative z-10">
+                      {step.title}
+                    </h3>
 
-                  {/* Title */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground relative z-10">
-                    {step.title}
-                  </h3>
+                    {/* Description */}
+                    <p className="text-muted-foreground leading-relaxed relative z-10">
+                      {step.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
 
-                  {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed relative z-10">
-                    {step.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center pt-8 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-            <p className="text-lg text-muted-foreground italic">
-              Choose one, two, or all three steps. We adapt to your needs.
-            </p>
+            <div
+              className="text-center pt-8 animate-fade-in-up"
+              style={{ animationDelay: "0.5s" }}
+            >
+              <p className="text-lg text-muted-foreground italic">
+                Choose one, two, or all three steps. We adapt to your needs.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </section>
   );
 };
