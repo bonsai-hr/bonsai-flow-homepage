@@ -32,7 +32,7 @@ const Process = () => {
   return (
     <section
       id="process"
-      className="relative overflow-hidden pt-12 md:pt-16 pb-24 md:pb-32"
+      className="relative overflow-hidden pt-8 md:pt-12 pb-24 md:pb-32"
     >
       {/* Background layer (BEHIND floaters) */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-background" />
