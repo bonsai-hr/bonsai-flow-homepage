@@ -17,19 +17,20 @@ const About = () => {
 
             <div className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground">
               <p className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                We’re AI enablement specialists for HR teams. Our job is to help People teams cut
-                down BAU chaos, modernise how they work, and finally have time for the things that
-                actually move the business forward.
+                Our focus is on enabling AI in HR teams. By cutting down BAU chaos, modernising 
+                how people work, and freeing up their time, we help People Teams become 
+                more productive, and commercially focused.
               </p>
 
               <p className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                We believe HR teams should be working in the thick of the action, driving revenue —
-                not buried in low-impact admin.
+                Most HR teams spend way too much of their time doing low impact administrative tasks, 
+                limiting their value to businesses, when they could be driving revenue and 
+                helping them reach their strategic objectives.
               </p>
 
               <p className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                We turn reactive, operational, and admin-heavy HR teams into commercial, proactive,
-                and strategic powerhouses. That's what we do. The Bonsai way.
+                We free up that space by through AI enablement, and with that freed up time, 
+                we help teams fill it with the type of work that allows HR to thrive
               </p>
             </div>
 
@@ -38,7 +39,7 @@ const About = () => {
               style={{ animationDelay: "0.4s" }}
             >
               <blockquote className="text-2xl md:text-3xl font-semibold text-foreground italic">
-                "The future of HR relies on proving its impact on revenue."
+                "The future of HR depends on how fast we can drop our admin, and start focusing on acheiving business goals."
               </blockquote>
             </div>
 
