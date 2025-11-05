@@ -1,9 +1,9 @@
 const About = () => {
   return (
-    <section
-      id="about"
-      className="relative overflow-hidden pt-16 md:pt-20 pb-14 md:pb-16"
-    >
+   <section
+  id="about"
+  className="relative overflow-hidden scroll-mt-24 md:scroll-mt-32 pt-16 md:pt-20 pb-14 md:pb-16"
+>
       {/* Background layer (BEHIND floaters) */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-background" />
 
