@@ -17,20 +17,20 @@ const About = () => {
 
             <div className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground">
               <p className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                Our focus is on enabling AI in HR teams. By cutting down BAU chaos, modernising 
-                how people work, and freeing up their time, we help People Teams become 
-                more productive, and commercially focused.
+                Our focus is on enabling HR teams to improve how they work. By cutting down 
+                BAU chaos and freeing up their time, we help People Teams become more 
+                productive, and commercially focused.
               </p>
 
               <p className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                 Most HR teams spend way too much of their time doing low impact administrative tasks, 
-                limiting their value to businesses, when they could be driving revenue and 
-                helping them reach their strategic objectives.
+                limiting their value to their organisation.
               </p>
 
               <p className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                We free up that space by through AI enablement, and with that freed up time, 
-                we help teams fill it with the type of work that allows HR to thrive
+                We free up that space through AI enablement, doing the necessary specialist work 
+                that makes room for an AI agent to take over the low-impact, repetitive side of HR work,
+                and with that freed up time, we guide HR teams to fill it with strategic, proactive work.
               </p>
             </div>
 
