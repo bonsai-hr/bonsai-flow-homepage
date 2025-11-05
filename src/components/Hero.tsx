@@ -24,18 +24,20 @@ const Hero = () => {
               We help HR teams reclaim time by reducing their admin through AI enablement, allowing them to become more efficient and impactful.
             </p>
 
-          {/* CTA Buttons */}
-{/* CTA Button */}
+          {/* CTA Button */}
           <div className="flex justify-center pt-6">
-            <Button asChild size="lg" className="text-base px-8 py-6 group">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-white text-primary font-semibold text-base px-8 py-6 hover:bg-primary hover:text-white transition-colors duration-300"
+            >
               <a href="#about">
-                <Calendar className="mr-2 h-5 w-5" />
                 Find Out More
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
           </div>
-
 
           {/* Tagline */}
           <p className="text-lg md:text-xl font-bold text-primary pt-8">
