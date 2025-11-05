@@ -39,7 +39,10 @@ const About = () => {
               style={{ animationDelay: "0.4s" }}
             >
               <blockquote className="text-2xl md:text-3xl font-semibold text-foreground italic">
-                "The future of HR depends on how fast we can drop our admin, and start focusing on acheiving business goals."
+                "The future of HR depends on how fast we can drop our admin, and start focusing on acheiving business goals.
+                
+                
+                "
               </blockquote>
             </div>
 
