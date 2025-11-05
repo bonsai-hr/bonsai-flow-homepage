@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.15] md:leading-[1.2] lg:leading-[1.25]">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.0] md:leading-[1.0] lg:leading-[1.1]">
             Say bye to admin
             <br />
             and say{" "}
