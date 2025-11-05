@@ -46,7 +46,7 @@ const Process = () => {
               How It Works — The Bonsai <span className="text-gradient">Process</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Three simple steps to transform your HR team from admin-heavy to strategically powerful.
+              Our enablement steps help your team to transform into strategic powerhouses within a few months.
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full"></div>
           </div>
