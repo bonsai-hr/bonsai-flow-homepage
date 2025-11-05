@@ -9,10 +9,10 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-            Say goodbye to HR admin, and say{" "}
-            <span className="text-gradient">hello</span>.
+            Say goodbye to admin... 
+            and say{" "} <span className="text-gradient">hello</span>
             <br />
-            to being strategic.
+            to Bonsai.
           </h1>
 
           {/* Subtext */}
