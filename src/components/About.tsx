@@ -15,7 +15,7 @@ const About = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full"></div>
             </div>
 
-            <div className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground">
+            <div className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground text-center">
               <p className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
                 Our focus is on enabling HR teams to improve how they work. We help 
                 cut down BAU chaos and free up the time, helping People Teams become 
