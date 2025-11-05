@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-regular">
             Say bye to admin 
             <br />
             and say{" "} <span className="text-gradient">hello</span> 
@@ -30,7 +30,7 @@ const Hero = () => {
               asChild
               size="lg"
               variant="outline"
-              className="bg-white text-primary font-semibold text-base px-8 py-6 hover:bg-primary hover:text-white transition-colors duration-300"
+              className="bg-white text-[#1E1E1E] font-semibold text-base px-8 py-6 hover:bg-primary hover:text-white transition-colors duration-300"
             >
               <a href="#about">
                 Find Out More
@@ -38,6 +38,7 @@ const Hero = () => {
               </a>
             </Button>
           </div>
+
 
           {/* Tagline */}
           <p className="text-lg md:text-xl font-bold text-primary pt-8">
