@@ -31,7 +31,7 @@ const Footer = () => {
           </nav>
 
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Bonsai HR. All rights reserved.
+            © {currentYear} Bonsai HR Ltd. All rights reserved.
           </p>
         </div>
 
