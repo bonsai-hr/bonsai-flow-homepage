@@ -32,8 +32,8 @@ const Navigation = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="#home" className="flex items-center gap-3">
-            <img src={logoCharcoal} alt="Bonsai HR" className="h-12 w-auto" />
-            <span className="text-xl font-semibold text-foreground">Bonsai HR</span>
+            <img src={logoCharcoal} alt="Bonsai" className="h-12 w-auto" />
+            <span className="text-xl font-semibold text-foreground">Bonsai</span>
           </a>
 
           {/* Desktop Navigation */}
