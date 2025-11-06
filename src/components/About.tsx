@@ -13,7 +13,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="space-y-4 animate-fade-in-up">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
-                About <span className="text-gradient">Bonsai HR</span>
+                About <span className="text-gradient">Bonsai </span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full" />
             </div>
