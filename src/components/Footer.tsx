@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
-            <img src={logoCharcoal} alt="Bonsai HR" className="h-10 w-auto" />
-            <span className="text-lg font-semibold text-foreground">Bonsai HR</span>
+            <img src={logoCharcoal} alt="Bonsai" className="h-10 w-auto" />
+            <span className="text-lg font-semibold text-foreground">Bonsai</span>
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
