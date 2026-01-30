@@ -24,7 +24,7 @@ const Contact = () => {
             style={{ animationDelay: "0.2s" }}
           >
             <Button asChild size="lg" className="text-base px-8 py-6 group">
-              <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendar.app.google/fZs7mYXt5qjbQy7f8" target="_blank" rel="noopener noreferrer">
                 <Calendar className="mr-2 h-5 w-5" />
                 Book a Discovery Call
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
