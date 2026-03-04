@@ -9,11 +9,12 @@ import NotFound from "./pages/NotFound";
 import FloatingBackground from "./components/FloatingBackground";
 
 const queryClient = new QueryClient();
+const SHOW_FLOATING_BACKGROUND = import.meta.env.VITE_ENABLE_FLOATING_BACKGROUND !== "false";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <FloatingBackground />   {/* 👈 NEW LINE */}
+      {SHOW_FLOATING_BACKGROUND && <FloatingBackground />}
       <Toaster />
       <Sonner />
       <BrowserRouter>
