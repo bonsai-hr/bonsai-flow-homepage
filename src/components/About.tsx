@@ -23,30 +23,22 @@ const About = () => {
                 className="animate-fade-in-up"
                 style={{ animationDelay: "0.1s" }}
               >
-                Our focus is on enabling HR teams to improve how they work. We
-                help cut down BAU chaos and free up the time, helping People
-                Teams become more productive and commercially focused for their
-                organisations.
+                Our focus is on helping scaling businesses bring structure to how AI is used. We help cut down reactive experimentation and create clarity, giving teams the direction and control they need to turn AI into measurable value.
+
               </p>
 
               <p
                 className="animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                Most HR teams spend way too much of their time doing low impact
-                administrative tasks, limiting their value, their impact, and
-                their development.
+                Most organisations are already adopting AI tools across departments, but adoption often grows faster than governance, ownership or ROI tracking.
               </p>
 
               <p
                 className="animate-fade-in-up"
                 style={{ animationDelay: "0.3s" }}
               >
-                We free up that space through AI enablement, doing the necessary
-                specialist work that makes room for an AI agent to take over the
-                low-impact, repetitive side of HR work, and with that freed up
-                time, we guide HR teams to fill it with strategic, proactive
-                work.
+                We bring that structure through practical AI roadmaps, defining where AI should be used, how it should be governed and how its impact should be measured, so leadership teams can move from scattered activity to strategic advantage.
               </p>
             </div>
 
@@ -55,8 +47,7 @@ const About = () => {
               style={{ animationDelay: "0.4s" }}
             >
               <blockquote className="text-2xl md:text-3xl font-semibold text-foreground italic">
-                "The future of HR depends on how fast we can drop our admin, and
-                start focusing on acheiving business goals."
+                At Bonsai, we believe that AI will reshape how organisations operate, and the real advantage belongs to those who structure it properly.
               </blockquote>
             </div>
 
