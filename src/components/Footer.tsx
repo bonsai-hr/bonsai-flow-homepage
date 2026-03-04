@@ -23,7 +23,7 @@ const Footer = () => {
               How It Works
             </a>
             <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-              Pricing
+              Services
             </a>
             <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
               Contact
@@ -37,7 +37,7 @@ const Footer = () => {
 
         <div className="mt-8 text-center">
           <p className="text-sm text-muted-foreground italic">
-            The Kind of HR That Makes You Money.
+            The AI Roadmap Specialists for Scaling Businesses.
           </p>
         </div>
       </div>
