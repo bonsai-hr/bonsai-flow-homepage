@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Process = () => {
   const steps = [
-    {
+    { 
       number: "01",
       title: "Diagnose",
       icon: Zap,
