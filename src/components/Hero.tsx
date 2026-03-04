@@ -11,10 +11,10 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.0] md:leading-[1.0] lg:leading-[1.1]">
             Everyone’s using AI.
             <br />
-            and say{" "}
-            <span className="text-gradient">hello</span>
+           But who’s got a{" "}
+            <span className="text-gradient">plan</span>
             <br />
-            But who’s got a plan for it?
+            for it?
           </h1>
 
           {/* Subtext */}
