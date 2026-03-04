@@ -10,7 +10,7 @@ const Contact = () => {
         <div className="mx-auto max-w-4xl space-y-12 text-center">
           <div className="space-y-6 animate-fade-in-up">
             <h2 className="text-center text-4xl font-extrabold leading-normal md:text-5xl">
-              Are You Ready to Make an AI <span className="text-gradient">Plan?</span>
+              Are You <span className="text-gradient">Ready</span> to Make an AI
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-foreground/70 md:text-xl">
               Most scaling businesses aren’t short on AI usage. They’re short on direction, visibility, and measurable outcomes. Before investing
