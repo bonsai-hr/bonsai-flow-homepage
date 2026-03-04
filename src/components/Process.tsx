@@ -24,8 +24,7 @@ const Process = () => {
       title: "Deploy",
       icon: TrendingUp,
       description:
-        "If needed, we support rollout by embedding governance, adoption process, and ROI measurement so AI becomes intentional, controlled, and commercially aligned.
-",
+        "If needed, we support rollout by embedding governance, adoption process, and ROI measurement so AI becomes intentional, controlled, and commercially aligned.",
       color: "text-accent",
     },
   ];
