@@ -6,32 +6,28 @@ const Pricing = () => {
   
   const tiers = [
     {
-      name: "🌱 Seedling",
-      headcount: "up to 150 employees",
-      description: "For growing companies ready to modernise their HR foundations.",
+      name: "🌱 AI Readiness & Risk Assessment",
+      headcount: "4 minutes • Immediate results",
+      description: "A quick diagnostic to uncover:",
       features: [
-        "Choose 1–3 steps (Optimise, Automate, Elevate)",
-        "Initial HR audit & gap analysis",
-        "Improve clarity across documents & processes",
-        "Optional AI agent setup",
-        "Elevate workshop for HR teams",
-        "Project duration: 1–3 months"
+        "Whether AI adoption is intentional or organic",
+        "Where governance / data risk may sit",
+        "Whether AI tool spend is visible and controlled",
+        "If ROI and productivity gains are being measured",
       ],
-      cta: "Contact Us"
+      cta: "Take the Assessment"
     },
     {
-      name: "🌿 Sapling",
-      headcount: "150–500 employees",
-      description: "For established teams ready to grow into strategic powerhouses.",
+      name: "🌿 AI Roadmap Debrief",
+      headcount: "15 minutes • Optional follow-up",
+      description: "A short call to help you:",
       features: [
-        "Choose 2–3 steps (Optimise, Automate, Elevate)",
-        "HR maturity audit & roadmap",
-        "Improve and streamline existing processes",
-        "Tailored AI agent implementation & training",
-        "Elevate workshops for HR teams",
-        "Project duration: 3–6 months"
+        "Sense-check your assessment results",
+        "Clarify the most important priorities",
+        "Understand what a roadmap could look like",
+        "Decide whether deeper support would be valuable",
       ],
-      cta: "Contact Us"
+      cta: "Speak to Us"
     }
   ];
 
@@ -45,10 +41,10 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="space-y-4 text-center animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              Our <span className="text-gradient">Growth</span> Plans
+              Get <span className="text-gradient">Started</span>
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto">
-              Our packages are based on company size.
+              Take the AI Readiness & Risk Assessment to see how roadmap-ready your organisation is and what to prioritise next.
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full"></div>
           </div>
@@ -100,10 +96,7 @@ const Pricing = () => {
 
           <div className="text-center pt-8 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
             <p className="text-foreground/70">
-              All packages can be customized to your specific needs.{" "}
-              <a href="#contact" className="text-secondary hover:underline font-medium transition-colors">
-                Let's discuss what works for you.
-              </a>
+              We recommend starting with the assessment to understand where you stand and what the right next step looks like.{" "}
             </p>
           </div>
         </div>
