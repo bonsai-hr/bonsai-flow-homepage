@@ -29,13 +29,13 @@ const Contact = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Speak to Us
               </a>
-            </Button>
             <Button asChild size="lg" className="text-base px-8 py-6 group">
-              <a href="https://calendar.app.google/fZs7mYXt5qjbQy7f8" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendar.app.google/miQu1P6JmvSVB6p96" target="_blank" rel="noopener noreferrer">
                 <Calendar className="mr-2 h-5 w-5" />
                 Book a Discovery Call
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
+            </Button>
           </div>
 
           <div
@@ -65,4 +65,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
