@@ -10,9 +10,7 @@ const Contact = () => {
         <div className="mx-auto max-w-4xl space-y-12 text-center">
           <div className="space-y-6 animate-fade-in-up">
             <h2 className="text-center text-4xl font-extrabold leading-normal md:text-5xl">
-              AI Is Already Active in Your Organisation.
-              <br />
-              The Question Is Whether It Has a <span className="text-gradient">Plan</span>.
+              Are You Ready to Make an AI <span className="text-gradient">Plan?</span>
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-foreground/70 md:text-xl">
               Most scaling businesses aren’t short on AI usage. They’re short on direction, visibility, and measurable outcomes. Before investing
@@ -24,14 +22,14 @@ const Contact = () => {
             <Button asChild size="lg" variant="outline" className="w-full px-8 py-6 text-base sm:w-auto">
               <a href="https://calendar.app.google/miQu1P6JmvSVB6p96" target="_blank" rel="noopener noreferrer">
                 <Mail className="mr-2 h-5 w-5" />
-                Speak to Us
+                Take the AI Health Test
               </a>
             </Button>
 
             <Button asChild size="lg" className="group w-full px-8 py-6 text-base sm:w-auto">
               <a href="https://calendar.app.google/fZs7mYXt5qjbQy7f8" target="_blank" rel="noopener noreferrer">
                 <Calendar className="mr-2 h-5 w-5" />
-                Book a Discovery Call
+                Speak to Us
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
