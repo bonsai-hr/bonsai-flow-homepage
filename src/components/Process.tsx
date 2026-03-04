@@ -5,26 +5,27 @@ const Process = () => {
   const steps = [
     {
       number: "01",
-      title: "Optimise",
-      icon: CheckCircle2,
+      title: "Diagnose",
+      icon: Zap,
       description:
-        "Improve clarity across documents, processes, and communication links. Build a foundation where everything works like clockwork — efficient, clear, and ready for AI.",
+        "Start with the AI Readiness & Risk Assessment. We uncover how AI is currently being used, where risks or blind spots exist, and how roadmap-ready your organisation really is.",
       color: "text-primary",
     },
     {
       number: "02",
-      title: "Automate",
-      icon: Zap,
+      title: "Design",
+      icon: CheckCircle2,
       description:
-        "We assess and implement the right AI agent for your business — cutting admin, sharpening focus on what matters most, and freeing up HR admin.",
+        "We design your AI roadmap, aligning direction, governance, tool visibility, ROI modelling, and workforce impact into one structured plan.",
       color: "text-secondary",
     },
     {
       number: "03",
-      title: "Elevate",
+      title: "Deploy",
       icon: TrendingUp,
       description:
-        "Shift from a support function to a proactive commercially focused unit — bringing better HR impact to the business.",
+        "If needed, we support rollout by embedding governance, adoption process, and ROI measurement so AI becomes intentional, controlled, and commercially aligned.
+",
       color: "text-accent",
     },
   ];
@@ -43,12 +44,11 @@ const Process = () => {
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="space-y-4 text-center animate-fade-in-up">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                How It Works — The Bonsai{" "}
+                How It Works — The Bonsai Roadmap{" "}
                 <span className="text-gradient">Process</span>
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                Our enablement steps help your team to transform into strategic
-                powerhouses within a few months.
+                A clear, three-step process for making AI adoption intentional, governed and commercially aligned.
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full" />
             </div>
@@ -90,7 +90,8 @@ const Process = () => {
               style={{ animationDelay: "0.5s" }}
             >
               <p className="text-lg text-muted-foreground italic">
-                Choose one, two, or all three steps. We adapt to your needs.
+                94% of organisations have moved beyond AI experimentation, yet only 14% say AI is deeply integrated into how they operate.
+Most companies are already experimenting with AI, however the advantage belongs to those who structure it.
               </p>
             </div>
           </div>
