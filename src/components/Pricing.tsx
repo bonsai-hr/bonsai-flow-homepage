@@ -6,7 +6,7 @@ const Pricing = () => {
   
   const tiers = [
     {
-      name: "🌱 AI Readiness & Risk Assessment",
+      name: "🌱 AI Health Check",
       headcount: "4 minutes • Immediate results",
       description: "A quick diagnostic to uncover:",
       features: [
@@ -44,7 +44,7 @@ const Pricing = () => {
               Get <span className="text-gradient">Started</span>
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto">
-              Take the AI Readiness & Risk Assessment to see how roadmap-ready your organisation is and what to prioritise next.
+              Take the AI Health Check to see how roadmap-ready your organisation is and what to prioritise next.
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-secondary via-accent to-primary mx-auto rounded-full"></div>
           </div>
