@@ -9,20 +9,20 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.0] md:leading-[1.0] lg:leading-[1.1]">
-            Say bye to admin
+            Everyone’s using AI.
             <br />
             and say{" "}
             <span className="text-gradient">hello</span>
             <br />
-            to Bonsai.
+            But who’s got a plan for it?
           </h1>
 
           {/* Subtext */}
           <p className="text-xl md:text-2xl text-foreground/70 font-medium max-w-3xl mx-auto">
-            The AI enablement specialists for HR teams.
+            The AI Roadmap Specialists for Scaling Businesses.
           </p>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-              We help HR teams reclaim time by reducing their admin through AI enablement, allowing them to become more efficient and impactful.
+              We help scaling organisations bring structure to how AI is used by aligning governance, spend visibility and ROI so AI becomes intentional, measurable and commercially aligned.
             </p>
 
           {/* CTA Button */}
@@ -43,7 +43,7 @@ const Hero = () => {
 
           {/* Tagline */}
           <p className="text-lg md:text-xl font-bold text-primary pt-8">
-            The Kind of HR That Makes You Money.
+            Turn AI Chaos into a Roadmap for Success.
           </p>
           
         </div>
