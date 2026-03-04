@@ -23,9 +23,8 @@ const Contact = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
-            </Button>
             <Button asChild size="lg" variant="outline" className="text-base px-8 py-6">
-              <a href="mailto:calendar.app.google/miQu1P6JmvSVB6p96">
+              <a href="https://calendar.app.google/miQu1P6JmvSVB6p96" target="_blank" rel="noopener noreferrer">
                 <Mail className="mr-2 h-5 w-5" />
                 Speak to Us
               </a>
