@@ -90,7 +90,7 @@ const Process = () => {
             >
               <p className="text-lg text-muted-foreground italic">
                 94% of organisations have moved beyond AI experimentation, yet only 14% say AI is deeply integrated into how they operate.
-Most companies are already experimenting with AI, however the advantage belongs to those who structure it.
+Most companies are already experimenting with AI, however the advantage belongs to organisations who structure it.
               </p>
             </div>
           </div>
