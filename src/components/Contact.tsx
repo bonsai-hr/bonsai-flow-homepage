@@ -11,11 +11,11 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <div className="space-y-6 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-extrabold text-center leading-normal">
-              Cut Admin. Free Time.<br />
-                Grow <span className="text-gradient">Profit</span>.
+              AI Is Already Active in Your Organisation.<br />
+                The Question Is Whether It Has a <span className="text-gradient">Plan</span>.
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-              What does your HR team look like right now and what would you like to see them accomplish? Let's have an honest conversation. No pressure, just a better understanding of how they're getting on.
+              Most scaling businesses aren’t short on AI usage. They’re short on direction, visibility, and measurable outcomes. Before investing more time, tools or budget, know exactly where you stand and what comes next.
             </p>
           </div>
 
@@ -23,19 +23,20 @@ const Contact = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
+            </Button>
+            <Button asChild size="lg" variant="outline" className="text-base px-8 py-6">
+              <a href="mailto:calendar.app.google/miQu1P6JmvSVB6p96">
+                <Mail className="mr-2 h-5 w-5" />
+                Speak to Us
+              </a>
+            </Button>
             <Button asChild size="lg" className="text-base px-8 py-6 group">
               <a href="https://calendar.app.google/fZs7mYXt5qjbQy7f8" target="_blank" rel="noopener noreferrer">
                 <Calendar className="mr-2 h-5 w-5" />
                 Book a Discovery Call
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="text-base px-8 py-6">
-              <a href="mailto:calendar.app.google/miQu1P6JmvSVB6p96">
-                <Mail className="mr-2 h-5 w-5" />
-                hello@bonsai-hr.co.uk
-              </a>
-            </Button>
+
           </div>
 
           <div
