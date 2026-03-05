@@ -6,15 +6,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import FloatingBackground from "./components/FloatingBackground";
 
 const queryClient = new QueryClient();
-const SHOW_FLOATING_BACKGROUND = import.meta.env.VITE_ENABLE_FLOATING_BACKGROUND !== "false";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      {SHOW_FLOATING_BACKGROUND && <FloatingBackground />}
       <Toaster />
       <Sonner />
       <BrowserRouter>
