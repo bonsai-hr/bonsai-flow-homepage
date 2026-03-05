@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
-import tailwindcssAnimate from "tailwindcss-animate";
+import * as tailwindcssAnimatePlugin from "tailwindcss-animate";
+
+const tailwindcssAnimate = (tailwindcssAnimatePlugin as { default?: unknown }).default ?? tailwindcssAnimatePlugin;
 
 export default {
   darkMode: ["class"],
@@ -25,7 +27,6 @@ export default {
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-@@ -88,27 +89,27 @@ export default {
             opacity: "0",
             transform: "translateY(30px)",
           },
