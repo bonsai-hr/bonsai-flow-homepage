@@ -1,5 +1,9 @@
 import type { Config } from "tailwindcss";
-import tailwindcssAnimate from "tailwindcss-animate";
+import * as tailwindcssAnimatePlugin from "tailwindcss-animate";
+
+const tailwindcssAnimate =
+  (tailwindcssAnimatePlugin as { default?: unknown }).default ??
+  tailwindcssAnimatePlugin;
 
 export default {
   darkMode: ["class"],
