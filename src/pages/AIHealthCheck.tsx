@@ -122,7 +122,7 @@ const AIHealthCheck = () => {
   }, [answers]);
 
   return (
-    <div className="min-h-screen bg-background font-body">
+    <div className="min-h-screen bg-primary font-body">
       <div className="px-4 py-12 md:py-20">
         <AnimatePresence mode="wait">
           {step === "intro" && (
