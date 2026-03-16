@@ -20,7 +20,7 @@ const Contact = () => {
 
           <div className="animate-fade-in-up flex w-full flex-col items-center justify-center gap-4 sm:flex-row" style={{ animationDelay: "0.2s" }}>
             <Button asChild size="lg" variant="outline" className="w-full px-8 py-6 text-base sm:w-auto">
-              <a href="https://calendar.app.google/miQu1P6JmvSVB6p96" target="_blank" rel="noopener noreferrer">
+              <a href="https://bonsai-hr.com/ai-health-check" target="_blank" rel="noopener noreferrer">
                 <Mail className="mr-2 h-5 w-5" />
                 Take the AI Health Test
               </a>

@@ -1,6 +1,5 @@
 import { Check } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 const Pricing = () => {
   
@@ -15,7 +14,6 @@ const Pricing = () => {
         "Whether AI tool spend is visible and controlled",
         "If ROI and productivity gains are being measured",
       ],
-      cta: "Take the Assessment"
     },
     {
       name: "🌿 AI Roadmap Debrief",
@@ -27,7 +25,6 @@ const Pricing = () => {
         "Understand what a roadmap could look like",
         "Decide whether deeper support would be valuable",
       ],
-      cta: "Speak to Us"
     }
   ];
 
@@ -81,14 +78,6 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button
-                    asChild
-                    className="w-full"
-                    variant={tier.featured ? "default" : "outline"}
-                    size="lg"
-                  >
-                    <a href="#contact">{tier.cta}</a>
-                  </Button>
                 </CardContent>
               </Card>
             ))}
