@@ -3,6 +3,7 @@ import {
   getStage,
   getSectionScores,
   getSectionLabel,
+  getStageLabel,
   getWeakestSection,
   STAGE_COPY,
   WEAKEST_SECTION_COPY,
@@ -19,7 +20,7 @@ const sectionIcons = { Direction: Compass, Structure: Shield, Impact: TrendingUp
 
 const ResultsScreen = ({ answers, onDebriefClick }: ResultsScreenProps) => {
   const totalScore = answers.reduce((a, b) => a + b, 0);
-  const stage = getStage(totalScore);
+  const stage = getStage(answers);
   const copy = STAGE_COPY[stage];
   const { direction, structure, impact } = getSectionScores(answers);
   const weakest = getWeakestSection(answers);
@@ -46,7 +47,7 @@ const ResultsScreen = ({ answers, onDebriefClick }: ResultsScreenProps) => {
           <span className="font-heading text-4xl md:text-5xl font-bold text-foreground">{totalScore}</span>
           <span className="font-body text-base text-muted-foreground">/ 30</span>
           <span className="ml-auto inline-block bg-accent/15 text-accent font-heading text-sm font-semibold px-4 py-1.5 rounded-full">
-            {stage}
+            {getStageLabel(stage)}
           </span>
         </div>
         <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-3 leading-tight">
@@ -72,27 +73,9 @@ const ResultsScreen = ({ answers, onDebriefClick }: ResultsScreenProps) => {
                 <Icon className="h-4 w-4 text-accent" />
                 <p className="font-heading text-sm font-semibold text-foreground">{sec.name}</p>
               </div>
-              <p className="font-heading text-lg font-bold text-foreground mb-1">{label}</p>
-              <div className="w-full h-1.5 bg-muted rounded-full overflow-hidden mb-3">
+              <p className="font-heading text-lg font-bold text-foreground mb-2">{getStageLabel(label)}</p>
+              <div className="w-full h-1.5 bg-muted rounded-full overflow-hidden mb-4">
                 <div className="h-full bg-accent rounded-full" style={{ width: `${pct}%` }} />
-              </div>
-              <div className="flex items-center justify-between w-full mt-2.5 mb-3">
-                {["Developing", "Taking shape", "Established"].map((stage, i, arr) => (
-                  <span key={stage} className="flex items-center gap-1">
-                    <span
-                      className={`font-heading text-[10px] tracking-wide ${
-                        stage === label
-                          ? "text-foreground font-semibold"
-                          : "text-muted-foreground/40"
-                      }`}
-                    >
-                      {stage}
-                    </span>
-                    {i < arr.length - 1 && (
-                      <span className="text-muted-foreground/25 text-[10px]">→</span>
-                    )}
-                  </span>
-                ))}
               </div>
               <p className="font-body text-xs text-muted-foreground">
                 {SECTION_DESCRIPTORS[sec.name][label]}

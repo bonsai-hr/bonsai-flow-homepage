@@ -1,21 +1,104 @@
 export const QUESTIONS = [
-  { section: "Direction", text: "Do you currently have a clear plan for how AI should be used across your organisation?" },
-  { section: "Direction", text: "Who owns AI direction and decision-making in the business?" },
-  { section: "Direction", text: "Do leaders have a shared understanding of where AI should create value?" },
-  { section: "Structure", text: "Do you know which AI tools are currently being used across the organisation?" },
-  { section: "Structure", text: "Would you know your total AI tool spend today?" },
-  { section: "Structure", text: "Are there guidelines or policies in place for how AI should be used at work?" },
-  { section: "Structure", text: "Is there any review or oversight before new AI tools are adopted?" },
-  { section: "Impact", text: "Are you measuring the time saved or value created from AI use?" },
-  { section: "Impact", text: "Are teams receiving guidance or training on how to use AI effectively?" },
-  { section: "Impact", text: "Is AI considered when planning hiring, workflows, or team structure?" },
-];
-
-export const ANSWER_OPTIONS = [
-  { label: "Not in place", value: 0 },
-  { label: "Emerging", value: 1 },
-  { label: "Partially established", value: 2 },
-  { label: "Clearly established", value: 3 },
+  {
+    section: "Direction",
+    text: "Do you currently have a clear plan for how AI should be used across your organisation?",
+    options: [
+      { label: "No plan in place", value: 0 },
+      { label: "Early ideas or informal direction", value: 1 },
+      { label: "Plan exists but not embedded", value: 2 },
+      { label: "Clear strategic plan guiding AI use", value: 3 },
+    ],
+  },
+  {
+    section: "Direction",
+    text: "Is responsibility for AI direction and decision-making clearly defined in your organisation?",
+    options: [
+      { label: "No ownership in place", value: 0 },
+      { label: "Informal or unclear ownership", value: 1 },
+      { label: "Defined but not consistently followed", value: 2 },
+      { label: "Clearly owned and understood", value: 3 },
+    ],
+  },
+  {
+    section: "Direction",
+    text: "To what extent do leaders share a clear and consistent view of where AI should create value in the organisation?",
+    options: [
+      { label: "No leadership alignment in place", value: 0 },
+      { label: "Early discussions", value: 1 },
+      { label: "Some alignment emerging", value: 2 },
+      { label: "Clear and consistent leadership alignment", value: 3 },
+    ],
+  },
+  {
+    section: "Structure",
+    text: "How clearly does the organisation understand which AI tools are currently being used across the business?",
+    options: [
+      { label: "No visibility in place", value: 0 },
+      { label: "Limited awareness", value: 1 },
+      { label: "Partially understood", value: 2 },
+      { label: "Clearly understood across the business", value: 3 },
+    ],
+  },
+  {
+    section: "Structure",
+    text: "How well does the organisation track and understand its spending on AI tools?",
+    options: [
+      { label: "No spend tracking in place", value: 0 },
+      { label: "Rough awareness", value: 1 },
+      { label: "Partially tracked", value: 2 },
+      { label: "Fully tracked and understood", value: 3 },
+    ],
+  },
+  {
+    section: "Structure",
+    text: "To what extent are there clear guidelines or policies for how AI should be used at work?",
+    options: [
+      { label: "No AI guidelines in place", value: 0 },
+      { label: "Informal guidance", value: 1 },
+      { label: "Some policies defined", value: 2 },
+      { label: "Clear strategic guidance on AI use", value: 3 },
+    ],
+  },
+  {
+    section: "Structure",
+    text: "To what extent is there formal review or oversight before new AI tools are adopted?",
+    options: [
+      { label: "No governance process in place", value: 0 },
+      { label: "Occasional review", value: 1 },
+      { label: "Some structured review", value: 2 },
+      { label: "Clear governance before adoption", value: 3 },
+    ],
+  },
+  {
+    section: "Impact",
+    text: "To what extent does the organisation measure the time saved or value created from AI use?",
+    options: [
+      { label: "No value measurement in place", value: 0 },
+      { label: "Benefits recognised", value: 1 },
+      { label: "Some value tracked", value: 2 },
+      { label: "Value and ROI clearly measured", value: 3 },
+    ],
+  },
+  {
+    section: "Impact",
+    text: "To what extent do teams receive structured guidance or training on how to use AI effectively?",
+    options: [
+      { label: "No training or guidance in place", value: 0 },
+      { label: "Informal guidance", value: 1 },
+      { label: "Some structured support", value: 2 },
+      { label: "Clear training and enablement", value: 3 },
+    ],
+  },
+  {
+    section: "Impact",
+    text: "To what extent does the organisation consider how AI could support or automate work before planning projects, hiring, workflows, or team structure?",
+    options: [
+      { label: "No AI consideration in planning", value: 0 },
+      { label: "Occasionally discussed", value: 1 },
+      { label: "Considered in some planning", value: 2 },
+      { label: "Consistently considered before work begins", value: 3 },
+    ],
+  },
 ];
 
 export const COMPANY_SIZES = ["1–49", "50–149", "150–299", "300–749", "750+"];
@@ -31,20 +114,26 @@ export const INDUSTRIES = [
   "Other",
 ];
 
-export type Stage = "Exploring" | "Experimenting" | "Structuring" | "Scaling";
+export type MaturityLevel = "none" | "emerging" | "established" | "strategic";
 
-export function getStage(score: number): Stage {
-  if (score <= 8) return "Exploring";
-  if (score <= 16) return "Experimenting";
-  if (score <= 23) return "Structuring";
-  return "Scaling";
+const MATURITY_ORDER: MaturityLevel[] = ["none", "emerging", "established", "strategic"];
+
+export function getStageLabel(stage: MaturityLevel): string {
+  return stage.charAt(0).toUpperCase() + stage.slice(1);
 }
 
-export function getSectionLabel(score: number, max: number): string {
-  const pct = score / max;
-  if (pct <= 0.33) return "Developing";
-  if (pct <= 0.66) return "Taking shape";
-  return "Established";
+export function getSectionLabel(score: number, max: number): MaturityLevel {
+  if (max === 12) {
+    if (score <= 3) return "none";
+    if (score <= 6) return "emerging";
+    if (score <= 9) return "established";
+    return "strategic";
+  }
+
+  if (score <= 2) return "none";
+  if (score <= 5) return "emerging";
+  if (score <= 7) return "established";
+  return "strategic";
 }
 
 export function getSectionScores(answers: number[]) {
@@ -52,6 +141,19 @@ export function getSectionScores(answers: number[]) {
   const structure = answers[3] + answers[4] + answers[5] + answers[6];
   const impact = answers[7] + answers[8] + answers[9];
   return { direction, structure, impact };
+}
+
+export function getStage(answers: number[]): MaturityLevel {
+  const { direction, structure, impact } = getSectionScores(answers);
+  const stages: MaturityLevel[] = [
+    getSectionLabel(direction, 9),
+    getSectionLabel(structure, 12),
+    getSectionLabel(impact, 9),
+  ];
+
+  return stages.reduce((lowest, current) =>
+    MATURITY_ORDER.indexOf(current) < MATURITY_ORDER.indexOf(lowest) ? current : lowest
+  );
 }
 
 export function getWeakestSection(answers: number[]): "Direction" | "Structure" | "Impact" {
@@ -65,34 +167,34 @@ export function getWeakestSection(answers: number[]): "Direction" | "Structure" 
   return "Impact";
 }
 
-export const STAGE_COPY: Record<Stage, { headline: string; summary: string; whatThisMeans: string; nextStep: string; cta: string }> = {
-  Exploring: {
-    headline: "Your organisation is currently exploring AI",
-    summary: "AI is likely being used in pockets across the business, but without enough direction or structure to consistently create value.",
-    whatThisMeans: "Teams may be experimenting independently, leaders may not yet share a clear view of where AI should create impact, and oversight around tools, spend, or governance is probably still limited.",
-    nextStep: "The priority now is gaining visibility over current AI usage and establishing clearer leadership direction so experimentation turns into intentional progress.",
-    cta: "A 15-minute AI Roadmap Debrief can help identify your first priority areas and prevent fragmented adoption.",
+export const STAGE_COPY: Record<MaturityLevel, { headline: string; summary: string; whatThisMeans: string; nextStep: string; cta: string }> = {
+  none: {
+    headline: "Your organisation has little AI maturity in place today",
+    summary: "At least one core pillar is still at a very early stage, which limits how confidently AI can create value across the organisation.",
+    whatThisMeans: "AI may be appearing in isolated pockets, but direction, structure, or measurable impact is not yet strong enough to support consistent progress.",
+    nextStep: "The priority now is to strengthen the weakest pillar first so AI adoption has a stable foundation to build on.",
+    cta: "A 15-minute AI Roadmap Debrief can help identify the first actions that will create the strongest baseline.",
   },
-  Experimenting: {
-    headline: "Your organisation is experimenting with AI",
-    summary: "AI adoption has started to emerge, but it still looks more like activity than strategy.",
-    whatThisMeans: "Some tools may already be delivering value in parts of the business, but governance, visibility, and measurable outcomes are still developing.",
-    nextStep: "The opportunity now is to connect experimentation with clearer priorities, governance, and leadership alignment so AI begins to deliver more consistent results.",
-    cta: "A 15-minute AI Roadmap Debrief can help you identify where structure will create the biggest return.",
+  emerging: {
+    headline: "Your organisation is building emerging AI maturity",
+    summary: "There is meaningful progress in some areas, but at least one pillar is still early enough to hold back overall maturity.",
+    whatThisMeans: "AI is beginning to take shape, but weaker direction, structure, or impact measurement may still be preventing more consistent results.",
+    nextStep: "The next step is to raise the lowest-scoring pillar so progress becomes more balanced and easier to scale.",
+    cta: "A 15-minute AI Roadmap Debrief can help pinpoint the pillar that will unlock the most momentum next.",
   },
-  Structuring: {
-    headline: "Your organisation is beginning to structure its AI use",
-    summary: "AI is becoming more intentional within your organisation, with clearer signs of leadership awareness and operational thinking.",
-    whatThisMeans: "You may already be moving beyond isolated experimentation, but gaps can still appear around consistency, governance, capability building, or measurement.",
-    nextStep: "The next step is strengthening the connection between AI initiatives and measurable business impact while ensuring the organisation can scale adoption safely.",
-    cta: "A 15-minute AI Roadmap Debrief can help identify the next priorities that move AI from promising to embedded.",
+  established: {
+    headline: "Your organisation has established AI maturity",
+    summary: "The core building blocks for AI are in place across the business, although one pillar still has room to strengthen before AI becomes fully strategic.",
+    whatThisMeans: "Leadership direction, operating structure, and business impact are reasonably developed, with remaining gains likely coming from improving consistency in the lowest pillar.",
+    nextStep: "The focus now is to strengthen that weaker pillar so AI can move from established practice to strategic capability.",
+    cta: "A 15-minute AI Roadmap Debrief can help identify what will move your organisation into a more strategic position.",
   },
-  Scaling: {
-    headline: "AI is becoming a strategic capability in your organisation",
-    summary: "AI appears to be integrated more deliberately into how the organisation operates and thinks about the future.",
-    whatThisMeans: "Leadership alignment, governance, and adoption are likely stronger, and AI is beginning to influence how work gets done rather than simply supporting isolated tasks.",
-    nextStep: "The focus now is ensuring momentum translates into measurable advantage through better prioritisation, capability development, and long-term operating model decisions.",
-    cta: "A 15-minute AI Roadmap Debrief can help surface the highest-value opportunities for scaling further.",
+  strategic: {
+    headline: "AI is operating as a strategic capability in your organisation",
+    summary: "All three pillars show strong maturity, indicating AI is supported by direction, structure, and clear business impact.",
+    whatThisMeans: "The organisation appears to have aligned leadership, supporting governance, and evidence that AI is influencing how work gets done and where value is created.",
+    nextStep: "The priority now is sustaining this maturity through continued capability building, prioritisation, and operating model refinement.",
+    cta: "A 15-minute AI Roadmap Debrief can help surface the highest-value opportunities for the next stage of advantage.",
   },
 };
 
@@ -104,18 +206,21 @@ export const WEAKEST_SECTION_COPY: Record<string, string> = {
 
 export const SECTION_DESCRIPTORS: Record<string, Record<string, string>> = {
   Direction: {
-    Developing: "Leadership alignment and AI priorities are still forming.",
-    "Taking shape": "Some clarity exists around AI direction, but it's not yet fully shared.",
-    Established: "There's strong alignment on where AI should create value.",
+    none: "Leadership alignment and AI priorities are largely undefined.",
+    emerging: "Some direction is forming, but it is not yet shared consistently.",
+    established: "Leadership direction is reasonably clear and aligned.",
+    strategic: "AI direction is clear, shared, and tied to strategic value.",
   },
   Structure: {
-    Developing: "Visibility and governance around AI tools are still limited.",
-    "Taking shape": "Some oversight is emerging, but gaps remain.",
-    Established: "Governance and tool visibility are well established.",
+    none: "Visibility and governance around AI tools are still very limited.",
+    emerging: "Some oversight is emerging, but important gaps remain.",
+    established: "Governance and tool visibility are meaningfully in place.",
+    strategic: "AI governance, oversight, and adoption structure are highly mature.",
   },
   Impact: {
-    Developing: "AI's contribution to measurable outcomes is still early.",
-    "Taking shape": "Some teams are seeing results, but measurement is inconsistent.",
-    Established: "AI is actively creating measurable value across the organisation.",
+    none: "AI's contribution to measurable outcomes is still minimal.",
+    emerging: "Some value is appearing, but measurement and enablement are inconsistent.",
+    established: "AI is creating measurable value in multiple areas.",
+    strategic: "AI is clearly shaping workflows, decisions, and business outcomes.",
   },
 };

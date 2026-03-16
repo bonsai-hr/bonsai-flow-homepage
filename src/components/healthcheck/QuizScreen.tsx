@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { QUESTIONS, ANSWER_OPTIONS } from "@/lib/healthcheck-data";
+import { QUESTIONS } from "@/lib/healthcheck-data";
 import { ChevronLeft } from "lucide-react";
 import { useCallback, useRef } from "react";
 
@@ -66,7 +66,7 @@ const QuizScreen = ({ currentQ, answers, onAnswer, onBack }: QuizScreenProps) =>
             </h2>
 
             <div className="flex flex-col gap-3">
-              {ANSWER_OPTIONS.map((opt) => {
+              {q.options.map((opt) => {
                 const isSelected = answers[currentQ] === opt.value;
                 return (
                   <button

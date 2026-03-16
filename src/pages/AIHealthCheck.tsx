@@ -9,6 +9,7 @@ import {
   getStage,
   getSectionScores,
   getSectionLabel,
+  getStageLabel,
   getWeakestSection,
   STAGE_COPY,
 } from "@/lib/healthcheck-data";
@@ -55,7 +56,7 @@ const AIHealthCheck = () => {
   const buildPayload = (lead: LeadData, debriefClicked: string) => {
     const a = answers as number[];
     const totalScore = a.reduce((s, v) => s + v, 0);
-    const stage = getStage(totalScore);
+    const finalMaturity = getStage(a);
     const { direction, structure, impact } = getSectionScores(a);
 
     return {
@@ -68,7 +69,8 @@ const AIHealthCheck = () => {
       companySize: lead.companySize,
       industry: lead.industry,
       totalScore,
-      stage,
+      stage: getStageLabel(finalMaturity),
+      finalMaturity,
       directionScore: direction,
       directionLabel: getSectionLabel(direction, 9),
       structureScore: structure,
@@ -80,7 +82,7 @@ const AIHealthCheck = () => {
       q6: a[5], q7: a[6], q8: a[7], q9: a[8], q10: a[9],
       debriefClicked,
       sourcePage: "/ai-health-check",
-      resultSummary: STAGE_COPY[stage].summary,
+      resultSummary: STAGE_COPY[finalMaturity].summary,
     };
   };
 
