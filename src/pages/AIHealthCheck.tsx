@@ -17,7 +17,7 @@ import {
 type Step = "intro" | "quiz" | "lead" | "loading" | "results";
 
 const WEBHOOK_URL =
-  "https://script.google.com/macros/s/AKfycbxXS8UmQBC6VcAo9iryBA3q_naLjZ1eJJLveBhg_jnMnPhG2fYsNMsScCwfZXmCgnV8/exec";
+  "https://script.google.com/macros/s/AKfycbxvCUUEdhRlMie9h2jtFUOuaAZrrmbe8mvf3GktZaxHBsY_GvLY66uGb-TqKdEPiulP/exec";
 
 const AIHealthCheck = () => {
   const [step, setStep] = useState<Step>("intro");
