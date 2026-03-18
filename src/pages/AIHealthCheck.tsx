@@ -12,6 +12,8 @@ import {
   getStageLabel,
   getWeakestSection,
   STAGE_COPY,
+  WEAKEST_SECTION_COPY,
+  SECTION_DESCRIPTORS,
 } from "@/lib/healthcheck-data";
 
 type Step = "intro" | "quiz" | "lead" | "loading" | "results";
@@ -53,38 +55,68 @@ const AIHealthCheck = () => {
     setStep("quiz");
   }, []);
 
-  const buildPayload = (lead: LeadData, debriefClicked: string) => {
-    const a = answers as number[];
-    const totalScore = a.reduce((s, v) => s + v, 0);
-    const finalMaturity = getStage(a);
-    const { direction, structure, impact } = getSectionScores(a);
+const buildPayload = (lead: LeadData, debriefClicked: string) => {
+  const a = answers as number[];
+  const totalScore = a.reduce((s, v) => s + v, 0);
+  const finalMaturity = getStage(a);
+  const { direction, structure, impact } = getSectionScores(a);
 
-    return {
-      submissionId: submissionIdRef.current,
-      timestamp: new Date().toISOString(),
-      name: lead.name,
-      email: lead.email,
-      company: lead.company,
-      role: lead.role,
-      companySize: lead.companySize,
-      industry: lead.industry,
-      totalScore,
-      stage: getStageLabel(finalMaturity),
-      finalMaturity,
-      directionScore: direction,
-      directionLabel: getSectionLabel(direction, 9),
-      structureScore: structure,
-      structureLabel: getSectionLabel(structure, 12),
-      impactScore: impact,
-      impactLabel: getSectionLabel(impact, 9),
-      lowestSection: getWeakestSection(a),
-      q1: a[0], q2: a[1], q3: a[2], q4: a[3], q5: a[4],
-      q6: a[5], q7: a[6], q8: a[7], q9: a[8], q10: a[9],
-      debriefClicked,
-      sourcePage: "/ai-health-check",
-      resultSummary: STAGE_COPY[finalMaturity].summary,
-    };
+  const directionLabelRaw = getSectionLabel(direction, 9);
+  const structureLabelRaw = getSectionLabel(structure, 12);
+  const impactLabelRaw = getSectionLabel(impact, 9);
+  const weakestSection = getWeakestSection(a);
+  const stageCopy = STAGE_COPY[finalMaturity];
+
+  return {
+    submissionId: submissionIdRef.current,
+    timestamp: new Date().toISOString(),
+    name: lead.name,
+    email: lead.email,
+    company: lead.company,
+    role: lead.role,
+    companySize: lead.companySize,
+    industry: lead.industry,
+
+    totalScore,
+    stage: getStageLabel(finalMaturity),
+    finalMaturity,
+
+    directionScore: direction,
+    directionLabel: getStageLabel(directionLabelRaw),
+    directionDescriptor: SECTION_DESCRIPTORS.Direction[directionLabelRaw],
+
+    structureScore: structure,
+    structureLabel: getStageLabel(structureLabelRaw),
+    structureDescriptor: SECTION_DESCRIPTORS.Structure[structureLabelRaw],
+
+    impactScore: impact,
+    impactLabel: getStageLabel(impactLabelRaw),
+    impactDescriptor: SECTION_DESCRIPTORS.Impact[impactLabelRaw],
+
+    lowestSection: weakestSection,
+    weakestSectionCopy: WEAKEST_SECTION_COPY[weakestSection],
+
+    resultHeadline: stageCopy.headline,
+    resultSummary: stageCopy.summary,
+    resultWhatThisMeans: stageCopy.whatThisMeans,
+    resultNextStep: stageCopy.nextStep,
+    resultCta: stageCopy.cta,
+
+    q1: a[0],
+    q2: a[1],
+    q3: a[2],
+    q4: a[3],
+    q5: a[4],
+    q6: a[5],
+    q7: a[6],
+    q8: a[7],
+    q9: a[8],
+    q10: a[9],
+
+    debriefClicked,
+    sourcePage: "/ai-health-check",
   };
+};
 
   const leadDataRef = useRef<LeadData | null>(null);
 
