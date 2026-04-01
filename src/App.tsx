@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AIHealthCheck from "./pages/AIHealthCheck";
+import PrivacyNotice from "./pages/PrivacyNotice";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/ai-health-check" element={<AIHealthCheck />} />
+          <Route path="/privacy-notice" element={<PrivacyNotice />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

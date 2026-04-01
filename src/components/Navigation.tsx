@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoCharcoal from "@/assets/logo-charcoal.svg";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,11 +17,11 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "What We Do", href: "#process" },
-    { label: "Services", href: "#pricing" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/#home" },
+    { label: "About", href: "/#about" },
+    { label: "What We Do", href: "/#process" },
+    { label: "Services", href: "/#pricing" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -31,10 +32,10 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <a href="#home" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img src={logoCharcoal} alt="Bonsai" className="h-12 w-auto" />
             <span className="text-xl font-semibold text-foreground">Bonsai</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -48,7 +49,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button asChild variant="default" size="sm">
-              <a href="#contact">Get Started</a>
+              <a href="/#contact">Get Started</a>
             </Button>
           </div>
 
@@ -75,7 +76,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button asChild variant="default" size="sm" className="w-full">
-              <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+              <a href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>
                 Get Started
               </a>
             </Button>

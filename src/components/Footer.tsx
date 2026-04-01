@@ -1,4 +1,5 @@
 import logoCharcoal from "@/assets/logo-charcoal.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,21 +14,24 @@ const Footer = () => {
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="#home" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#home" className="text-muted-foreground hover:text-foreground transition-colors">
               Home
             </a>
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#about" className="text-muted-foreground hover:text-foreground transition-colors">
               About
             </a>
-            <a href="#process" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#process" className="text-muted-foreground hover:text-foreground transition-colors">
               How It Works
             </a>
-            <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
               Services
             </a>
-            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#contact" className="text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </a>
+            <Link to="/privacy-notice" className="text-muted-foreground hover:text-foreground transition-colors">
+              Privacy Notice
+            </Link>
           </nav>
 
           <p className="text-sm text-muted-foreground">
