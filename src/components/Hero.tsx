@@ -13,7 +13,7 @@ const Hero = () => {
         >
           Everyone's using AI.{" "}
           <br className="hidden sm:block" />
-          But who's got a{" "}
+          But have you got a{" "}
           <span className="bg-gradient-to-r from-accent via-primary to-primary/60 bg-clip-text text-transparent">
             plan
           </span>{" "}
